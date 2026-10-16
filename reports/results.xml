@@ -1,26 +1,106 @@
-<testsuites id="" name="" tests="11" failures="0" skipped="0" errors="0" time="11.44816399999999">
-<testsuite name="api/restful-booker.spec.ts" timestamp="2026-10-16T09:02:23.041Z" hostname="chromium" tests="11" failures="0" skipped="0" time="15.087" errors="0">
-<testcase name="Restful Booker API Tests › 1. Successful Authentication @api @booker" classname="api/restful-booker.spec.ts" time="1.097">
+<testsuites id="" name="" tests="45" failures="0" skipped="0" errors="0" time="14.864606999999843">
+<testsuite name="api/auth.spec.ts" timestamp="2026-10-16T09:31:52.680Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.613" errors="0">
+<testcase name="Authentication › 1. Successful Login @api @auth" classname="api/auth.spec.ts" time="0.86">
 </testcase>
-<testcase name="Restful Booker API Tests › 2. Invalid Authentication @api @booker" classname="api/restful-booker.spec.ts" time="1.069">
+<testcase name="Authentication › 2. Invalid Login @api @auth" classname="api/auth.spec.ts" time="0.753">
 </testcase>
-<testcase name="Restful Booker API Tests › 3. Get All Bookings @api @booker" classname="api/restful-booker.spec.ts" time="3.295">
+</testsuite>
+<testsuite name="api/carts.spec.ts" timestamp="2026-10-16T09:31:52.680Z" hostname="chromium" tests="9" failures="0" skipped="0" time="6.543" errors="0">
+<testcase name="Carts API › 20. Get All Carts @api @carts" classname="api/carts.spec.ts" time="0.725">
 </testcase>
-<testcase name="Restful Booker API Tests › 4. Get Booking by ID @api @booker" classname="api/restful-booker.spec.ts" time="1.149">
+<testcase name="Carts API › 21. Get Cart by ID @api @carts" classname="api/carts.spec.ts" time="0.772">
 </testcase>
-<testcase name="Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker" classname="api/restful-booker.spec.ts" time="1.095">
+<testcase name="Carts API › 22. Get Carts by Date Range @api @carts" classname="api/carts.spec.ts" time="0.705">
 </testcase>
-<testcase name="Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker" classname="api/restful-booker.spec.ts" time="1.139">
+<testcase name="Carts API › 23. Get User Cart @api @carts" classname="api/carts.spec.ts" time="0.698">
 </testcase>
-<testcase name="Restful Booker API Tests › 7. Booking CRUD - Create @api @booker" classname="api/restful-booker.spec.ts" time="0.828">
+<testcase name="Carts API › 24. Get Carts with Limit @api @carts" classname="api/carts.spec.ts" time="0.561">
 </testcase>
-<testcase name="Restful Booker API Tests › 8. Booking CRUD - Update @api @booker" classname="api/restful-booker.spec.ts" time="1.337">
+<testcase name="Carts API › 25. Sort Carts @api @carts" classname="api/carts.spec.ts" time="1.1">
 </testcase>
-<testcase name="Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker" classname="api/restful-booker.spec.ts" time="1.263">
+<testcase name="Carts API › 26. Cart CRUD - Create @api @carts @crud" classname="api/carts.spec.ts" time="0.621">
 </testcase>
-<testcase name="Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker" classname="api/restful-booker.spec.ts" time="1.173">
+<testcase name="Carts API › 27. Cart CRUD - Update @api @carts @crud" classname="api/carts.spec.ts" time="0.607">
 </testcase>
-<testcase name="Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e" classname="api/restful-booker.spec.ts" time="1.642">
+<testcase name="Carts API › 28. Cart CRUD - Delete @api @carts @crud" classname="api/carts.spec.ts" time="0.754">
+</testcase>
+</testsuite>
+<testsuite name="api/e2e-workflows.spec.ts" timestamp="2026-10-16T09:31:52.680Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.083" errors="0">
+<testcase name="E2E Workflows › 32. Product CRUD Workflow @api @e2e @products" classname="api/e2e-workflows.spec.ts" time="1.038">
+</testcase>
+<testcase name="E2E Workflows › 33. User CRUD Workflow @api @e2e @users" classname="api/e2e-workflows.spec.ts" time="1.129">
+</testcase>
+<testcase name="E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts" classname="api/e2e-workflows.spec.ts" time="0.916">
+</testcase>
+</testsuite>
+<testsuite name="api/products.spec.ts" timestamp="2026-10-16T09:31:52.680Z" hostname="chromium" tests="10" failures="0" skipped="0" time="5.555" errors="0">
+<testcase name="Products API › 3. Get All Products @api @products" classname="api/products.spec.ts" time="0.755">
+</testcase>
+<testcase name="Products API › 4. Get Product by ID @api @products" classname="api/products.spec.ts" time="0.532">
+</testcase>
+<testcase name="Products API › 5. Get Products with Limit @api @products" classname="api/products.spec.ts" time="0.46">
+</testcase>
+<testcase name="Products API › 6. Sort Products Ascending @api @products" classname="api/products.spec.ts" time="0.503">
+</testcase>
+<testcase name="Products API › 7. Sort Products Descending @api @products" classname="api/products.spec.ts" time="0.536">
+</testcase>
+<testcase name="Products API › 8. Get All Product Categories @api @products" classname="api/products.spec.ts" time="0.486">
+</testcase>
+<testcase name="Products API › 9. Get Products by Category @api @products" classname="api/products.spec.ts" time="0.538">
+</testcase>
+<testcase name="Products API › 10. Product CRUD - Create @api @products @crud" classname="api/products.spec.ts" time="0.593">
+</testcase>
+<testcase name="Products API › 11. Product CRUD - Update @api @products @crud" classname="api/products.spec.ts" time="0.507">
+</testcase>
+<testcase name="Products API › 12. Product CRUD - Delete @api @products @crud" classname="api/products.spec.ts" time="0.645">
+</testcase>
+</testsuite>
+<testsuite name="api/restful-booker.spec.ts" timestamp="2026-10-16T09:31:52.680Z" hostname="chromium" tests="11" failures="0" skipped="0" time="13.377" errors="0">
+<testcase name="Restful Booker API Tests › 1. Successful Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.774">
+</testcase>
+<testcase name="Restful Booker API Tests › 2. Invalid Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.679">
+</testcase>
+<testcase name="Restful Booker API Tests › 3. Get All Bookings @api @booker" classname="api/restful-booker.spec.ts" time="2.979">
+</testcase>
+<testcase name="Restful Booker API Tests › 4. Get Booking by ID @api @booker" classname="api/restful-booker.spec.ts" time="0.973">
+</testcase>
+<testcase name="Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker" classname="api/restful-booker.spec.ts" time="0.996">
+</testcase>
+<testcase name="Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker" classname="api/restful-booker.spec.ts" time="0.955">
+</testcase>
+<testcase name="Restful Booker API Tests › 7. Booking CRUD - Create @api @booker" classname="api/restful-booker.spec.ts" time="0.755">
+</testcase>
+<testcase name="Restful Booker API Tests › 8. Booking CRUD - Update @api @booker" classname="api/restful-booker.spec.ts" time="1.158">
+</testcase>
+<testcase name="Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker" classname="api/restful-booker.spec.ts" time="1.29">
+</testcase>
+<testcase name="Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker" classname="api/restful-booker.spec.ts" time="1.141">
+</testcase>
+<testcase name="Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e" classname="api/restful-booker.spec.ts" time="1.677">
+</testcase>
+</testsuite>
+<testsuite name="api/schema-validation.spec.ts" timestamp="2026-10-16T09:31:52.680Z" hostname="chromium" tests="3" failures="0" skipped="0" time="2.76" errors="0">
+<testcase name="JSON Schema Validation › 29. Product Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.883">
+</testcase>
+<testcase name="JSON Schema Validation › 30. User Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.966">
+</testcase>
+<testcase name="JSON Schema Validation › 31. Cart Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.911">
+</testcase>
+</testsuite>
+<testsuite name="api/users.spec.ts" timestamp="2026-10-16T09:31:52.680Z" hostname="chromium" tests="7" failures="0" skipped="0" time="4.769" errors="0">
+<testcase name="Users API › 13. Get All Users @api @users" classname="api/users.spec.ts" time="0.572">
+</testcase>
+<testcase name="Users API › 14. Get User by ID @api @users" classname="api/users.spec.ts" time="0.651">
+</testcase>
+<testcase name="Users API › 15. Get Users with Limit @api @users" classname="api/users.spec.ts" time="0.57">
+</testcase>
+<testcase name="Users API › 16. Sort Users @api @users" classname="api/users.spec.ts" time="1.122">
+</testcase>
+<testcase name="Users API › 17. User CRUD - Create @api @users @crud" classname="api/users.spec.ts" time="0.863">
+</testcase>
+<testcase name="Users API › 18. User CRUD - Update @api @users @crud" classname="api/users.spec.ts" time="0.449">
+</testcase>
+<testcase name="Users API › 19. User CRUD - Delete @api @users @crud" classname="api/users.spec.ts" time="0.542">
 </testcase>
 </testsuite>
 </testsuites>
