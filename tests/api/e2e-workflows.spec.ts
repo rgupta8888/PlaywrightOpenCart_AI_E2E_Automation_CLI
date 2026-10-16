@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
+import { expectStatus } from "../../utils/apiHelpers";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -17,7 +18,7 @@ test.describe("E2E Workflows", () => {
         const productData = RandomDataUtil.generateProductPayload();
         const createUrl = buildUrl(Routes.CREATE_PRODUCT);
         const createResp = await request.post(createUrl, { data: productData });
-        expect(createResp.status()).toBe(201);
+        await expectStatus(createResp, 201);
         const createdProduct = await createResp.json();
         expect(createdProduct).toHaveProperty("id");
         const productId = createdProduct.id;
@@ -25,20 +26,20 @@ test.describe("E2E Workflows", () => {
         const updateData = RandomDataUtil.generateUpdatedProductPayload();
         const updateUrl = buildUrl(Routes.UPDATE_PRODUCT, { id: productId });
         const updateResp = await request.put(updateUrl, { data: updateData });
-        expect(updateResp.status()).toBe(200);
+        await expectStatus(updateResp, 200);
         const updatedProduct = await updateResp.json();
         expect(updatedProduct.title).toContain("Updated ");
 
         const deleteUrl = buildUrl(Routes.DELETE_PRODUCT, { id: productId });
         const deleteResp = await request.delete(deleteUrl);
-        expect(deleteResp.status()).toBe(200);
+        await expectStatus(deleteResp, 200);
     });
 
     test("33. User CRUD Workflow @api @e2e @users", async ({ request }) => {
         const userData = RandomDataUtil.generateUserPayload();
         const createUrl = buildUrl(Routes.CREATE_USER);
         const createResp = await request.post(createUrl, { data: userData });
-        expect(createResp.status()).toBe(201);
+        await expectStatus(createResp, 201);
         const createdUser = await createResp.json();
         expect(createdUser).toHaveProperty("id");
         const userId = createdUser.id;
@@ -46,18 +47,18 @@ test.describe("E2E Workflows", () => {
         const updateData = RandomDataUtil.generateUserUpdatePayload();
         const updateUrl = buildUrl(Routes.UPDATE_USER, { id: userId });
         const updateResp = await request.put(updateUrl, { data: updateData });
-        expect(updateResp.status()).toBe(200);
+        await expectStatus(updateResp, 200);
 
         const deleteUrl = buildUrl(Routes.DELETE_USER, { id: userId });
         const deleteResp = await request.delete(deleteUrl);
-        expect(deleteResp.status()).toBe(200);
+        await expectStatus(deleteResp, 200);
     });
 
     test("34. Cart CRUD Workflow @api @e2e @carts", async ({ request }) => {
         const cartData = RandomDataUtil.generateCartPayload(1);
         const createUrl = buildUrl(Routes.CREATE_CART);
         const createResp = await request.post(createUrl, { data: cartData });
-        expect(createResp.status()).toBe(201);
+        await expectStatus(createResp, 201);
         const createdCart = await createResp.json();
         expect(createdCart).toHaveProperty("id");
         expect(createdCart.userId).toBe(cartData.userId);
@@ -67,10 +68,10 @@ test.describe("E2E Workflows", () => {
         const updateData = RandomDataUtil.generateUpdatedCartPayload(1);
         const updateUrl = buildUrl(Routes.UPDATE_CART, { id: cartId });
         const updateResp = await request.put(updateUrl, { data: updateData });
-        expect(updateResp.status()).toBe(200);
+        await expectStatus(updateResp, 200);
 
         const deleteUrl = buildUrl(Routes.DELETE_CART, { id: cartId });
         const deleteResp = await request.delete(deleteUrl);
-        expect(deleteResp.status()).toBe(200);
+        await expectStatus(deleteResp, 200);
     });
 });

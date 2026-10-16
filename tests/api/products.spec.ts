@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
+import { expectStatus } from "../../utils/apiHelpers";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -19,7 +20,7 @@ test.describe("Products API", () => {
     test("3. Get All Products @api @products", async ({ request }) => {
         const url = buildUrl(Routes.GET_ALL_PRODUCTS);
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
@@ -37,7 +38,7 @@ test.describe("Products API", () => {
     test("4. Get Product by ID @api @products", async ({ request }) => {
         const url = buildUrl(Routes.GET_PRODUCT_BY_ID, { id: sampleProductId });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty("id");
@@ -52,7 +53,7 @@ test.describe("Products API", () => {
     test("5. Get Products with Limit @api @products", async ({ request }) => {
         const url = buildUrl(Routes.GET_PRODUCTS_WITH_LIMIT, { limit: productLimit });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
@@ -62,7 +63,7 @@ test.describe("Products API", () => {
     test("6. Sort Products Ascending @api @products", async ({ request }) => {
         const url = buildUrl(Routes.GET_PRODUCTS_SORTED, { order: "asc" });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
@@ -77,7 +78,7 @@ test.describe("Products API", () => {
     test("7. Sort Products Descending @api @products", async ({ request }) => {
         const url = buildUrl(Routes.GET_PRODUCTS_SORTED, { order: "desc" });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
@@ -92,7 +93,7 @@ test.describe("Products API", () => {
     test("8. Get All Product Categories @api @products", async ({ request }) => {
         const url = buildUrl(Routes.GET_ALL_CATEGORIES);
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
@@ -103,7 +104,7 @@ test.describe("Products API", () => {
         const category = "electronics";
         const url = buildUrl(Routes.GET_PRODUCTS_BY_CATEGORY, { category });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
@@ -117,7 +118,7 @@ test.describe("Products API", () => {
         const productData = RandomDataUtil.generateProductPayload();
         const url = buildUrl(Routes.CREATE_PRODUCT);
         const resp = await request.post(url, { data: productData });
-        expect(resp.status()).toBe(201);
+        await expectStatus(resp, 201);
 
         const body = await resp.json();
         expect(body).toHaveProperty("id");
@@ -130,7 +131,7 @@ test.describe("Products API", () => {
         const updateData = RandomDataUtil.generateUpdatedProductPayload();
         const url = buildUrl(Routes.UPDATE_PRODUCT, { id: sampleProductId });
         const resp = await request.put(url, { data: updateData });
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body.id).toBe(sampleProductId);
@@ -140,6 +141,6 @@ test.describe("Products API", () => {
     test("12. Product CRUD - Delete @api @products @crud", async ({ request }) => {
         const url = buildUrl(Routes.DELETE_PRODUCT, { id: sampleProductId });
         const resp = await request.delete(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
     });
 });

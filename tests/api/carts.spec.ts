@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
+import { expectStatus } from "../../utils/apiHelpers";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -19,7 +20,7 @@ test.describe("Carts API", () => {
     test("20. Get All Carts @api @carts", async ({ request }) => {
         const url = buildUrl(Routes.GET_ALL_CARTS);
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
         expect(body.length).toBeGreaterThan(0);
@@ -28,7 +29,7 @@ test.describe("Carts API", () => {
     test("21. Get Cart by ID @api @carts", async ({ request }) => {
         const url = buildUrl(Routes.GET_CART_BY_ID, { id: sampleCartId });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
         const body = await resp.json();
         expect(body).toHaveProperty("id");
         expect(body.id).toBe(sampleCartId);
@@ -44,7 +45,7 @@ test.describe("Carts API", () => {
             enddate: "2020-10-10",
         });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
     });
@@ -52,7 +53,7 @@ test.describe("Carts API", () => {
     test("23. Get User Cart @api @carts", async ({ request }) => {
         const url = buildUrl(Routes.GET_USER_CART, { userId: 1 });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
     });
@@ -60,7 +61,7 @@ test.describe("Carts API", () => {
     test("24. Get Carts with Limit @api @carts", async ({ request }) => {
         const url = buildUrl(Routes.GET_CARTS_WITH_LIMIT, { limit: cartLimit });
         const resp = await request.get(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
         const body = await resp.json();
         expect(Array.isArray(body)).toBe(true);
         expect(body.length).toBe(cartLimit);
@@ -69,7 +70,7 @@ test.describe("Carts API", () => {
     test("25. Sort Carts @api @carts", async ({ request }) => {
         const ascUrl = buildUrl(Routes.GET_CARTS_SORTED, { order: "asc" });
         const ascResp = await request.get(ascUrl);
-        expect(ascResp.status()).toBe(200);
+        await expectStatus(ascResp, 200);
         const ascBody = await ascResp.json();
         expect(Array.isArray(ascBody)).toBe(true);
         const ascIds = ascBody.map((c: { id: number }) => c.id);
@@ -79,7 +80,7 @@ test.describe("Carts API", () => {
 
         const descUrl = buildUrl(Routes.GET_CARTS_SORTED, { order: "desc" });
         const descResp = await request.get(descUrl);
-        expect(descResp.status()).toBe(200);
+        await expectStatus(descResp, 200);
         const descBody = await descResp.json();
         expect(Array.isArray(descBody)).toBe(true);
         const descIds = descBody.map((c: { id: number }) => c.id);
@@ -92,7 +93,7 @@ test.describe("Carts API", () => {
         const cartData = RandomDataUtil.generateCartPayload(1);
         const url = buildUrl(Routes.CREATE_CART);
         const resp = await request.post(url, { data: cartData });
-        expect(resp.status()).toBe(201);
+        await expectStatus(resp, 201);
         const body = await resp.json();
         expect(body).toHaveProperty("id");
         expect(typeof body.id).toBe("number");
@@ -105,7 +106,7 @@ test.describe("Carts API", () => {
         const cartData = RandomDataUtil.generateUpdatedCartPayload(1);
         const url = buildUrl(Routes.UPDATE_CART, { id: sampleCartId });
         const resp = await request.put(url, { data: cartData });
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
         const body = await resp.json();
         expect(body.id).toBe(sampleCartId);
         expect(body).toHaveProperty("products");
@@ -114,6 +115,6 @@ test.describe("Carts API", () => {
     test("28. Cart CRUD - Delete @api @carts @crud", async ({ request }) => {
         const url = buildUrl(Routes.DELETE_CART, { id: sampleCartId });
         const resp = await request.delete(url);
-        expect(resp.status()).toBe(200);
+        await expectStatus(resp, 200);
     });
 });

@@ -1,7 +1,7 @@
 
 export const bookerRoutes = {
 
-    BASE_URL: 'https://restful-booker.herokuapp.com',
+    BASE_URL: process.env.BOOKER_API_BASE_URL || 'https://restful-booker.herokuapp.com',
 
     // =========================
     // Health Check Routes

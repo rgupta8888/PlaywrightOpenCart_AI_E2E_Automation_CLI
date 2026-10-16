@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
+import { expectStatus } from "../../utils/apiHelpers";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -21,7 +22,7 @@ test.describe("Authentication", () => {
                 password: "83r5^_",
             },
         });
-        expect(resp.status()).toBe(201);
+        await expectStatus(resp, 201);
 
         const body = await resp.json();
         expect(body).toHaveProperty("token");
@@ -37,6 +38,6 @@ test.describe("Authentication", () => {
                 password: RandomDataUtil.getPassword(),
             },
         });
-        expect(resp.status()).toBe(401);
+        await expectStatus(resp, 401);
     });
 });
