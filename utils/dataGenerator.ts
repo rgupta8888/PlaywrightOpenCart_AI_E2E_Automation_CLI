@@ -186,4 +186,43 @@ export class RandomDataUtil {
             ],
         };
     }
+
+    // 2.5 Restful Booker API Payload Generators
+    static generateRestfulBookerAuthPayload() {
+        return {
+            username: "admin",
+            password: "password123",
+        };
+    }
+
+    static generateBookingPayload() {
+        const checkin = this.getCurrentDate();
+        const checkout = this.getFutureDate(1);
+        return {
+            firstname: this.getFirstName(),
+            lastname: this.getLastName(),
+            totalprice: this.getNumber(),
+            depositpaid: faker.datatype.boolean(),
+            bookingdates: {
+                checkin,
+                checkout,
+            },
+            additionalneeds: faker.lorem.word(),
+        };
+    }
+
+    static generateUpdatedBookingPayload() {
+        const payload = this.generateBookingPayload();
+        return {
+            ...payload,
+            firstname: `Updated ${payload.firstname}`,
+        };
+    }
+
+    static generatePartialBookingPayload() {
+        return {
+            firstname: `Updated ${this.getFirstName()}`,
+            lastname: this.getLastName(),
+        };
+    }
 }
