@@ -1,0 +1,109 @@
+<testsuites id="" name="" tests="34" failures="1" skipped="0" errors="0" time="15.070905999995768">
+<testsuite name="api/auth.spec.ts" timestamp="2026-10-16T06:50:25.841Z" hostname="chromium" tests="2" failures="0" skipped="0" time="2.054" errors="0">
+<testcase name="Authentication › 1. Successful Login @api @auth" classname="api/auth.spec.ts" time="0.965">
+</testcase>
+<testcase name="Authentication › 2. Invalid Login @api @auth" classname="api/auth.spec.ts" time="1.089">
+</testcase>
+</testsuite>
+<testsuite name="api/carts.spec.ts" timestamp="2026-10-16T06:50:25.841Z" hostname="chromium" tests="9" failures="0" skipped="0" time="7.46" errors="0">
+<testcase name="Carts API › 20. Get All Carts @api @carts" classname="api/carts.spec.ts" time="1.14">
+</testcase>
+<testcase name="Carts API › 21. Get Cart by ID @api @carts" classname="api/carts.spec.ts" time="1.184">
+</testcase>
+<testcase name="Carts API › 22. Get Carts by Date Range @api @carts" classname="api/carts.spec.ts" time="0.777">
+</testcase>
+<testcase name="Carts API › 23. Get User Cart @api @carts" classname="api/carts.spec.ts" time="0.77">
+</testcase>
+<testcase name="Carts API › 24. Get Carts with Limit @api @carts" classname="api/carts.spec.ts" time="0.612">
+</testcase>
+<testcase name="Carts API › 25. Sort Carts @api @carts" classname="api/carts.spec.ts" time="1.064">
+</testcase>
+<testcase name="Carts API › 26. Cart CRUD - Create @api @carts @crud" classname="api/carts.spec.ts" time="0.499">
+</testcase>
+<testcase name="Carts API › 27. Cart CRUD - Update @api @carts @crud" classname="api/carts.spec.ts" time="0.683">
+</testcase>
+<testcase name="Carts API › 28. Cart CRUD - Delete @api @carts @crud" classname="api/carts.spec.ts" time="0.731">
+</testcase>
+</testsuite>
+<testsuite name="api/e2e-workflows.spec.ts" timestamp="2026-10-16T06:50:25.841Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.237" errors="0">
+<testcase name="E2E Workflows › 32. Product CRUD Workflow @api @e2e @products" classname="api/e2e-workflows.spec.ts" time="0.84">
+</testcase>
+<testcase name="E2E Workflows › 33. User CRUD Workflow @api @e2e @users" classname="api/e2e-workflows.spec.ts" time="1.355">
+</testcase>
+<testcase name="E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts" classname="api/e2e-workflows.spec.ts" time="1.042">
+</testcase>
+</testsuite>
+<testsuite name="api/products.spec.ts" timestamp="2026-10-16T06:50:25.841Z" hostname="chromium" tests="10" failures="0" skipped="0" time="7.822" errors="0">
+<testcase name="Products API › 3. Get All Products @api @products" classname="api/products.spec.ts" time="1.086">
+</testcase>
+<testcase name="Products API › 4. Get Product by ID @api @products" classname="api/products.spec.ts" time="0.544">
+</testcase>
+<testcase name="Products API › 5. Get Products with Limit @api @products" classname="api/products.spec.ts" time="0.972">
+</testcase>
+<testcase name="Products API › 6. Sort Products Ascending @api @products" classname="api/products.spec.ts" time="0.629">
+</testcase>
+<testcase name="Products API › 7. Sort Products Descending @api @products" classname="api/products.spec.ts" time="0.972">
+</testcase>
+<testcase name="Products API › 8. Get All Product Categories @api @products" classname="api/products.spec.ts" time="0.814">
+</testcase>
+<testcase name="Products API › 9. Get Products by Category @api @products" classname="api/products.spec.ts" time="0.76">
+</testcase>
+<testcase name="Products API › 10. Product CRUD - Create @api @products @crud" classname="api/products.spec.ts" time="0.788">
+</testcase>
+<testcase name="Products API › 11. Product CRUD - Update @api @products @crud" classname="api/products.spec.ts" time="0.703">
+</testcase>
+<testcase name="Products API › 12. Product CRUD - Delete @api @products @crud" classname="api/products.spec.ts" time="0.554">
+</testcase>
+</testsuite>
+<testsuite name="api/schema-validation.spec.ts" timestamp="2026-10-16T06:50:25.841Z" hostname="chromium" tests="3" failures="0" skipped="0" time="2.487" errors="0">
+<testcase name="JSON Schema Validation › 29. Product Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.688">
+</testcase>
+<testcase name="JSON Schema Validation › 30. User Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.893">
+</testcase>
+<testcase name="JSON Schema Validation › 31. Cart Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.906">
+</testcase>
+</testsuite>
+<testsuite name="api/users.spec.ts" timestamp="2026-10-16T06:50:25.841Z" hostname="chromium" tests="7" failures="1" skipped="0" time="4.816" errors="0">
+<testcase name="Users API › 13. Get All Users @api @users" classname="api/users.spec.ts" time="0.571">
+</testcase>
+<testcase name="Users API › 14. Get User by ID @api @users" classname="api/users.spec.ts" time="0.762">
+</testcase>
+<testcase name="Users API › 15. Get Users with Limit @api @users" classname="api/users.spec.ts" time="0.573">
+</testcase>
+<testcase name="Users API › 16. Sort Users @api @users" classname="api/users.spec.ts" time="1.09">
+</testcase>
+<testcase name="Users API › 17. User CRUD - Create @api @users @crud" classname="api/users.spec.ts" time="0.802">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-users-Users-API-17-User-CRUD---Create-api-users-crud-chromium/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toHaveProperty(path)" type="expect.toHaveProperty">
+<![CDATA[  [chromium] › api/users.spec.ts:72:9 › Users API › 17. User CRUD - Create @api @users @crud ───────
+
+    Error: expect(received).toHaveProperty(path)
+
+    Expected path: "username"
+    Received path: []
+
+    Received value: {"id": 11}
+
+      79 |         expect(typeof body.id).toBe("number");
+      80 |         // FakeStoreAPI only echoes back id and username, not email
+    > 81 |         expect(body).toHaveProperty("username");
+         |                      ^
+      82 |     });
+      83 |
+      84 |     test("18. User CRUD - Update @api @users @crud", async ({ request }) => {
+        at /Users/sakshijindal/Documents/Playwright_OpenCart_AI/tests/api/users.spec.ts:81:22
+
+    Error Context: ../test-results/api-users-Users-API-17-User-CRUD---Create-api-users-crud-chromium/error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Users API › 18. User CRUD - Update @api @users @crud" classname="api/users.spec.ts" time="0.459">
+</testcase>
+<testcase name="Users API › 19. User CRUD - Delete @api @users @crud" classname="api/users.spec.ts" time="0.559">
+</testcase>
+</testsuite>
+</testsuites>
