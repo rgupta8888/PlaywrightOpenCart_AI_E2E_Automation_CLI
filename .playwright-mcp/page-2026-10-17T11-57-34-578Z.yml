@@ -1,0 +1,218 @@
+- generic [active] [ref=f15e1]:
+  - navigation [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - button "$ Currency " [ref=f15e7] [cursor=pointer]:
+        - strong [ref=f15e8]: $
+        - text: Currency
+        - generic [ref=f15e9]: 
+      - list [ref=f15e11]:
+        - listitem [ref=f15e12]:
+          - link "" [ref=f15e13] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=information/contact
+          - text: "123456789"
+        - listitem [ref=f15e15]:
+          - link " My Account" [ref=f15e16] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/account
+            - generic [ref=f15e17]: 
+            - text: My Account
+        - listitem [ref=f15e19]:
+          - link " Wish List (0)" [ref=f15e20] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/wishlist
+            - generic [ref=f15e21]: 
+            - text: Wish List (0)
+        - listitem [ref=f15e22]:
+          - link " Shopping Cart" [ref=f15e23] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=checkout/cart
+            - generic [ref=f15e24]: 
+            - text: Shopping Cart
+        - listitem [ref=f15e25]:
+          - link " Checkout" [ref=f15e26] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=checkout/checkout
+            - generic [ref=f15e27]: 
+            - text: Checkout
+  - banner [ref=f15e28]:
+    - generic [ref=f15e30]:
+      - link [ref=f15e33] [cursor=pointer]:
+        - /url: https://awesomeqa.com/ui/index.php?route=common/home
+        - img "TheTestingAcademy eCommerce" [ref=f15e34]
+      - generic [ref=f15e36]:
+        - textbox "Search" [ref=f15e37]
+        - button "" [ref=f15e39] [cursor=pointer]
+      - button " 0 item(s) - $0.00" [ref=f15e43] [cursor=pointer]:
+        - generic [ref=f15e44]: 
+        - text: 0 item(s) - $0.00
+  - navigation [ref=f15e46]:
+    - generic: 
+    - list [ref=f15e48]:
+      - listitem [ref=f15e49]:
+        - link "Desktops" [ref=f15e50] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=20
+      - listitem [ref=f15e51]:
+        - link "Laptops & Notebooks" [ref=f15e52] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=18
+      - listitem [ref=f15e53]:
+        - link "Components" [ref=f15e54] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=25
+      - listitem [ref=f15e55]:
+        - link "Tablets" [ref=f15e56] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=57
+      - listitem [ref=f15e57]:
+        - link "Software" [ref=f15e58] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=17
+      - listitem [ref=f15e59]:
+        - link "Phones & PDAs" [ref=f15e60] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=24
+      - listitem [ref=f15e61]:
+        - link "Cameras" [ref=f15e62] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=33
+      - listitem [ref=f15e63]:
+        - link "MP3 Players" [ref=f15e64] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=34
+  - generic [ref=f15e65]:
+    - list [ref=f15e66]:
+      - listitem [ref=f15e67]:
+        - link "" [ref=f15e68] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=common/home
+      - listitem [ref=f15e70]:
+        - link "Account" [ref=f15e71] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=account/account
+    - generic [ref=f15e72]:
+      - generic [ref=f15e73]:
+        - heading "My Account" [level=2] [ref=f15e74]
+        - list [ref=f15e75]:
+          - listitem [ref=f15e76]:
+            - link "Edit your account information" [ref=f15e77] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/edit
+          - listitem [ref=f15e78]:
+            - link "Change your password" [ref=f15e79] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/password
+          - listitem [ref=f15e80]:
+            - link "Modify your address book entries" [ref=f15e81] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/address
+          - listitem [ref=f15e82]:
+            - link "Modify your wish list" [ref=f15e83] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/wishlist
+        - heading "My Orders" [level=2] [ref=f15e84]
+        - list [ref=f15e85]:
+          - listitem [ref=f15e86]:
+            - link "View your order history" [ref=f15e87] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/order
+          - listitem [ref=f15e88]:
+            - link "Downloads" [ref=f15e89] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/download
+          - listitem [ref=f15e90]:
+            - link "Your Reward Points" [ref=f15e91] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/reward
+          - listitem [ref=f15e92]:
+            - link "View your return requests" [ref=f15e93] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/return
+          - listitem [ref=f15e94]:
+            - link "Your Transactions" [ref=f15e95] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/transaction
+          - listitem [ref=f15e96]:
+            - link "Recurring payments" [ref=f15e97] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/recurring
+        - heading "My Affiliate Account" [level=2] [ref=f15e98]
+        - list [ref=f15e99]:
+          - listitem [ref=f15e100]:
+            - link "Register for an affiliate account" [ref=f15e101] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/affiliate/add
+        - heading "Newsletter" [level=2] [ref=f15e102]
+        - list [ref=f15e103]:
+          - listitem [ref=f15e104]:
+            - link "Subscribe / unsubscribe to newsletter" [ref=f15e105] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=account/newsletter
+      - complementary [ref=f15e106]:
+        - generic [ref=f15e107]:
+          - link "My Account" [ref=f15e108] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/account
+          - link "Edit Account" [ref=f15e109] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/edit
+          - link "Password" [ref=f15e110] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/password
+          - link "Address Book" [ref=f15e111] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/address
+          - link "Wish List" [ref=f15e112] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/wishlist
+          - link "Order History" [ref=f15e113] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/order
+          - link "Downloads" [ref=f15e114] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/download
+          - link "Recurring payments" [ref=f15e115] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/recurring
+          - link "Reward Points" [ref=f15e116] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/reward
+          - link "Returns" [ref=f15e117] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/return
+          - link "Transactions" [ref=f15e118] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/transaction
+          - link "Newsletter" [ref=f15e119] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/newsletter
+          - link "Logout" [ref=f15e120] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/logout
+  - contentinfo [ref=f15e121]:
+    - generic [ref=f15e122]:
+      - generic [ref=f15e123]:
+        - generic [ref=f15e124]:
+          - heading "Information" [level=5] [ref=f15e125]
+          - list [ref=f15e126]:
+            - listitem [ref=f15e127]:
+              - link "About Us" [ref=f15e128] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=4
+            - listitem [ref=f15e129]:
+              - link "Delivery Information" [ref=f15e130] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=6
+            - listitem [ref=f15e131]:
+              - link "Privacy Policy" [ref=f15e132] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=3
+            - listitem [ref=f15e133]:
+              - link "Terms & Conditions" [ref=f15e134] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=5
+        - generic [ref=f15e135]:
+          - heading "Customer Service" [level=5] [ref=f15e136]
+          - list [ref=f15e137]:
+            - listitem [ref=f15e138]:
+              - link "Contact Us" [ref=f15e139] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/contact
+            - listitem [ref=f15e140]:
+              - link "Returns" [ref=f15e141] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/return/add
+            - listitem [ref=f15e142]:
+              - link "Site Map" [ref=f15e143] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/sitemap
+        - generic [ref=f15e144]:
+          - heading "Extras" [level=5] [ref=f15e145]
+          - list [ref=f15e146]:
+            - listitem [ref=f15e147]:
+              - link "Brands" [ref=f15e148] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=product/manufacturer
+            - listitem [ref=f15e149]:
+              - link "Gift Certificates" [ref=f15e150] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/voucher
+            - listitem [ref=f15e151]:
+              - link "Affiliate" [ref=f15e152] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=affiliate/login
+            - listitem [ref=f15e153]:
+              - link "Specials" [ref=f15e154] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=product/special
+        - generic [ref=f15e155]:
+          - heading "My Account" [level=5] [ref=f15e156]
+          - list [ref=f15e157]:
+            - listitem [ref=f15e158]:
+              - link "My Account" [ref=f15e159] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/account
+            - listitem [ref=f15e160]:
+              - link "Order History" [ref=f15e161] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/order
+            - listitem [ref=f15e162]:
+              - link "Wish List" [ref=f15e163] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/wishlist
+            - listitem [ref=f15e164]:
+              - link "Newsletter" [ref=f15e165] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/newsletter
+      - separator [ref=f15e166]
+      - paragraph [ref=f15e167]:
+        - text: Powered By
+        - link "OpenCart" [ref=f15e168] [cursor=pointer]:
+          - /url: http://www.opencart.com
+        - text: TheTestingAcademy eCommerce © 2026

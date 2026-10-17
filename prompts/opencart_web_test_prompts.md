@@ -1,6 +1,6 @@
 # OpenCart Frontend Store – Web Test Scenarios
 
-**Application URL:** `http://localhost/opencart/upload/`
+**Application URL:** `https://awesomeqa.com/ui/`
 
 Implement these scenarios following the framework conventions defined in `playwright-mcp-context.md`.
 
@@ -184,7 +184,7 @@ Do not hard-code test data in the spec.
 
 For each data row:
 
-1. Open the OpenCart login page: `http://localhost/opencart/upload/`.
+1. Open the OpenCart login page: `https://awesomeqa.com/ui/index.php?route=account/login`.
 2. Enter the email and password.
 3. If a value is blank/whitespace, leave that field empty.
 4. Submit the login form.

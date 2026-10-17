@@ -1,0 +1,286 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: web/end-to-end-shopping.spec.ts >> End-to-End Shopping Flow @master @e2e @web
+- Location: tests/web/end-to-end-shopping.spec.ts:24:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f9e1]:
+  - navigation [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - button "$ Currency " [ref=f9e7] [cursor=pointer]:
+        - strong [ref=f9e8]: $
+        - text: Currency
+        - generic [ref=f9e9]: 
+      - list [ref=f9e11]:
+        - listitem [ref=f9e12]:
+          - link "" [ref=f9e13] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=information/contact
+          - text: "123456789"
+        - listitem [ref=f9e15]:
+          - link " My Account" [ref=f9e16] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/account
+            - generic [ref=f9e17]: 
+            - text: My Account
+        - listitem [ref=f9e19]:
+          - link " Wish List (0)" [ref=f9e20] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=account/wishlist
+            - generic [ref=f9e21]: 
+            - text: Wish List (0)
+        - listitem [ref=f9e22]:
+          - link " Shopping Cart" [ref=f9e23] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=checkout/cart
+            - generic [ref=f9e24]: 
+            - text: Shopping Cart
+        - listitem [ref=f9e25]:
+          - link " Checkout" [ref=f9e26] [cursor=pointer]:
+            - /url: https://awesomeqa.com/ui/index.php?route=checkout/checkout
+            - generic [ref=f9e27]: 
+            - text: Checkout
+  - banner [ref=f9e28]:
+    - generic [ref=f9e30]:
+      - link [ref=f9e33] [cursor=pointer]:
+        - /url: https://awesomeqa.com/ui/index.php?route=common/home
+        - img "TheTestingAcademy eCommerce" [ref=f9e34]
+      - generic [ref=f9e36]:
+        - textbox "Search" [active] [ref=f9e37]: MacBook
+        - button "" [ref=f9e39] [cursor=pointer]
+      - button " 0 item(s) - $0.00" [ref=f9e43] [cursor=pointer]:
+        - generic [ref=f9e44]: 
+        - text: 0 item(s) - $0.00
+  - navigation [ref=f9e46]:
+    - generic: 
+    - list [ref=f9e48]:
+      - listitem [ref=f9e49]:
+        - link "Desktops" [ref=f9e50] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=20
+      - listitem [ref=f9e51]:
+        - link "Laptops & Notebooks" [ref=f9e52] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=18
+      - listitem [ref=f9e53]:
+        - link "Components" [ref=f9e54] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=25
+      - listitem [ref=f9e55]:
+        - link "Tablets" [ref=f9e56] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=57
+      - listitem [ref=f9e57]:
+        - link "Software" [ref=f9e58] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=17
+      - listitem [ref=f9e59]:
+        - link "Phones & PDAs" [ref=f9e60] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=24
+      - listitem [ref=f9e61]:
+        - link "Cameras" [ref=f9e62] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=33
+      - listitem [ref=f9e63]:
+        - link "MP3 Players" [ref=f9e64] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/category&path=34
+  - generic [ref=f9e67]:
+    - generic [ref=f9e68]:
+      - generic [ref=f9e70]:
+        - img "MacBookAir" [ref=f9e72]
+        - link [ref=f9e74] [cursor=pointer]:
+          - /url: index.php?route=product/product&path=57&product_id=49
+          - img "iPhone 6" [ref=f9e75]
+        - img "MacBookAir" [ref=f9e77]
+        - link [ref=f9e79] [cursor=pointer]:
+          - /url: index.php?route=product/product&path=57&product_id=49
+          - img "iPhone 6" [ref=f9e80]
+      - generic [ref=f9e81]:
+        - generic [ref=f9e82] [cursor=pointer]
+        - generic [ref=f9e83] [cursor=pointer]
+      - generic:
+        - generic [ref=f9e84] [cursor=pointer]: 
+        - generic [ref=f9e85] [cursor=pointer]: 
+    - heading "Featured" [level=3] [ref=f9e86]
+    - generic [ref=f9e87]:
+      - generic [ref=f9e89]:
+        - link [ref=f9e91] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=43
+          - img "MacBook" [ref=f9e92]
+        - generic [ref=f9e93]:
+          - heading [level=4] [ref=f9e94]:
+            - link "MacBook" [ref=f9e95] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=43
+          - paragraph [ref=f9e96]: Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.1..
+          - paragraph [ref=f9e97]:
+            - text: $602.00
+            - generic [ref=f9e98]: "Ex Tax: $500.00"
+        - generic [ref=f9e99]:
+          - button " Add to Cart" [ref=f9e100] [cursor=pointer]:
+            - generic [ref=f9e101]: 
+            - text: Add to Cart
+          - button "" [ref=f9e102] [cursor=pointer]
+          - button "" [ref=f9e104] [cursor=pointer]
+      - generic [ref=f9e107]:
+        - link [ref=f9e109] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=40
+          - img "iPhone" [ref=f9e110]
+        - generic [ref=f9e111]:
+          - heading [level=4] [ref=f9e112]:
+            - link "iPhone" [ref=f9e113] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=40
+          - paragraph [ref=f9e114]: iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a nam..
+          - paragraph [ref=f9e115]:
+            - text: $123.20
+            - generic [ref=f9e116]: "Ex Tax: $101.00"
+        - generic [ref=f9e117]:
+          - button " Add to Cart" [ref=f9e118] [cursor=pointer]:
+            - generic [ref=f9e119]: 
+            - text: Add to Cart
+          - button "" [ref=f9e120] [cursor=pointer]
+          - button "" [ref=f9e122] [cursor=pointer]
+      - generic [ref=f9e125]:
+        - link [ref=f9e127] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=42
+          - img "Apple Cinema 30\"" [ref=f9e128]
+        - generic [ref=f9e129]:
+          - heading [level=4] [ref=f9e130]:
+            - link "Apple Cinema 30\"" [ref=f9e131] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=42
+          - paragraph [ref=f9e132]: The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..
+          - paragraph [ref=f9e133]:
+            - text: $110.00 $122.00
+            - generic [ref=f9e134]: "Ex Tax: $90.00"
+        - generic [ref=f9e135]:
+          - button " Add to Cart" [ref=f9e136] [cursor=pointer]:
+            - generic [ref=f9e137]: 
+            - text: Add to Cart
+          - button "" [ref=f9e138] [cursor=pointer]
+          - button "" [ref=f9e140] [cursor=pointer]
+      - generic [ref=f9e143]:
+        - link [ref=f9e145] [cursor=pointer]:
+          - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=30
+          - img "Canon EOS 5D" [ref=f9e146]
+        - generic [ref=f9e147]:
+          - heading [level=4] [ref=f9e148]:
+            - link "Canon EOS 5D" [ref=f9e149] [cursor=pointer]:
+              - /url: https://awesomeqa.com/ui/index.php?route=product/product&product_id=30
+          - paragraph [ref=f9e150]: Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we'r..
+          - paragraph [ref=f9e151]:
+            - text: $98.00 $122.00
+            - generic [ref=f9e152]: "Ex Tax: $80.00"
+        - generic [ref=f9e153]:
+          - button " Add to Cart" [ref=f9e154] [cursor=pointer]:
+            - generic [ref=f9e155]: 
+            - text: Add to Cart
+          - button "" [ref=f9e156] [cursor=pointer]
+          - button "" [ref=f9e158] [cursor=pointer]
+    - generic [ref=f9e160]:
+      - generic [ref=f9e162]:
+        - img "NFL" [ref=f9e164]
+        - img "RedBull" [ref=f9e166]
+        - img "Sony" [ref=f9e168]
+        - img "Starbucks" [ref=f9e170]
+        - img "Nintendo" [ref=f9e172]
+        - img "Harley Davidson" [ref=f9e174]
+        - img "Dell" [ref=f9e176]
+        - img "Disney" [ref=f9e178]
+        - img "Coca Cola" [ref=f9e180]
+        - img "Burger King" [ref=f9e182]
+        - img "Canon" [ref=f9e184]
+        - img "NFL" [ref=f9e186]
+        - img "RedBull" [ref=f9e188]
+        - img "Sony" [ref=f9e190]
+        - img "Starbucks" [ref=f9e192]
+        - img "Nintendo" [ref=f9e194]
+        - img "Harley Davidson" [ref=f9e196]
+        - img "Dell" [ref=f9e198]
+        - img "Disney" [ref=f9e200]
+        - img "Coca Cola" [ref=f9e202]
+        - img "Burger King" [ref=f9e204]
+      - generic [ref=f9e205]:
+        - generic [ref=f9e206] [cursor=pointer]
+        - generic [ref=f9e207] [cursor=pointer]
+        - generic [ref=f9e208] [cursor=pointer]
+        - generic [ref=f9e209] [cursor=pointer]
+        - generic [ref=f9e210] [cursor=pointer]
+        - generic [ref=f9e211] [cursor=pointer]
+        - generic [ref=f9e212] [cursor=pointer]
+        - generic [ref=f9e213] [cursor=pointer]
+        - generic [ref=f9e214] [cursor=pointer]
+        - generic [ref=f9e215] [cursor=pointer]
+        - generic [ref=f9e216] [cursor=pointer]
+      - generic:
+        - generic [ref=f9e217] [cursor=pointer]: 
+        - generic [ref=f9e218] [cursor=pointer]: 
+  - contentinfo [ref=f9e219]:
+    - generic [ref=f9e220]:
+      - generic [ref=f9e221]:
+        - generic [ref=f9e222]:
+          - heading "Information" [level=5] [ref=f9e223]
+          - list [ref=f9e224]:
+            - listitem [ref=f9e225]:
+              - link "About Us" [ref=f9e226] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=4
+            - listitem [ref=f9e227]:
+              - link "Delivery Information" [ref=f9e228] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=6
+            - listitem [ref=f9e229]:
+              - link "Privacy Policy" [ref=f9e230] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=3
+            - listitem [ref=f9e231]:
+              - link "Terms & Conditions" [ref=f9e232] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/information&information_id=5
+        - generic [ref=f9e233]:
+          - heading "Customer Service" [level=5] [ref=f9e234]
+          - list [ref=f9e235]:
+            - listitem [ref=f9e236]:
+              - link "Contact Us" [ref=f9e237] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/contact
+            - listitem [ref=f9e238]:
+              - link "Returns" [ref=f9e239] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/return/add
+            - listitem [ref=f9e240]:
+              - link "Site Map" [ref=f9e241] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=information/sitemap
+        - generic [ref=f9e242]:
+          - heading "Extras" [level=5] [ref=f9e243]
+          - list [ref=f9e244]:
+            - listitem [ref=f9e245]:
+              - link "Brands" [ref=f9e246] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=product/manufacturer
+            - listitem [ref=f9e247]:
+              - link "Gift Certificates" [ref=f9e248] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/voucher
+            - listitem [ref=f9e249]:
+              - link "Affiliate" [ref=f9e250] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=affiliate/login
+            - listitem [ref=f9e251]:
+              - link "Specials" [ref=f9e252] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=product/special
+        - generic [ref=f9e253]:
+          - heading "My Account" [level=5] [ref=f9e254]
+          - list [ref=f9e255]:
+            - listitem [ref=f9e256]:
+              - link "My Account" [ref=f9e257] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/account
+            - listitem [ref=f9e258]:
+              - link "Order History" [ref=f9e259] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/order
+            - listitem [ref=f9e260]:
+              - link "Wish List" [ref=f9e261] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/wishlist
+            - listitem [ref=f9e262]:
+              - link "Newsletter" [ref=f9e263] [cursor=pointer]:
+                - /url: https://awesomeqa.com/ui/index.php?route=account/newsletter
+      - separator [ref=f9e264]
+      - paragraph [ref=f9e265]:
+        - text: Powered By
+        - link "OpenCart" [ref=f9e266] [cursor=pointer]:
+          - /url: http://www.opencart.com
+        - text: TheTestingAcademy eCommerce © 2026
+```

@@ -1,38 +1,132 @@
-<testsuites id="" name="" tests="11" failures="0" skipped="0" errors="0" time="27.090875000000004">
-<testsuite name="api/restful-booker.spec.ts" timestamp="2026-10-17T10:06:42.317Z" hostname="chromium" tests="11" failures="0" skipped="0" time="34.845" errors="0">
-<testcase name="Restful Booker API Tests › 1. Successful Authentication @api @booker" classname="api/restful-booker.spec.ts" time="1.634">
-<properties>
-<property name="priority" value="P1">
-</property>
-<property name="severity" value="critical">
-</property>
-<property name="owner" value="rahul">
-</property>
-<property name="feature" value="login API">
-</property>
-<property name="story" value="Login-231">
-</property>
-</properties>
+<testsuites id="" name="" tests="12" failures="0" skipped="0" errors="0" time="83.38865200000001">
+<testsuite name="web/add-to-cart.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="29.018" errors="0">
+<testcase name="Add Product to Cart @master @regression @web" classname="web/add-to-cart.spec.ts" time="29.018">
+<system-out>
+<![CDATA[✅ Add Product to Cart completed successfully!
+
+[[ATTACHMENT|../test-results/web-add-to-cart-Add-Product-to-Cart-master-regression-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-add-to-cart-Add-Product-to-Cart-master-regression-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 2. Invalid Authentication @api @booker" classname="api/restful-booker.spec.ts" time="1.413">
+</testsuite>
+<testsuite name="web/end-to-end-shopping.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="68.938" errors="0">
+<testcase name="End-to-End Shopping Flow @master @e2e @web" classname="web/end-to-end-shopping.spec.ts" time="68.938">
+<system-out>
+<![CDATA[✅ End-to-End Shopping completed successfully!
+
+[[ATTACHMENT|../test-results/web-end-to-end-shopping-En-b9307-hopping-Flow-master-e2e-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 3. Get All Bookings @api @booker" classname="api/restful-booker.spec.ts" time="19.008">
+</testsuite>
+<testsuite name="web/invalid-login.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="24.816" errors="0">
+<testcase name="Invalid Login Flow @master @sanity @regression @web" classname="web/invalid-login.spec.ts" time="24.816">
+<system-out>
+<![CDATA[✅ Invalid Login completed successfully!
+
+[[ATTACHMENT|../test-results/web-invalid-login-Invalid--f9207-aster-sanity-regression-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-invalid-login-Invalid--f9207-aster-sanity-regression-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 4. Get Booking by ID @api @booker" classname="api/restful-booker.spec.ts" time="1.967">
+</testsuite>
+<testsuite name="web/login-data-driven.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="5" failures="0" skipped="0" time="90.866" errors="0">
+<testcase name="Login Data Driven - Valid login [row 1] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="23.891">
+<system-out>
+<![CDATA[✅ Login Data Driven - Valid login completed!
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-d7a1b-row-1-datadriven-master-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-d7a1b-row-1-datadriven-master-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker" classname="api/restful-booker.spec.ts" time="1.452">
+<testcase name="Login Data Driven - Invalid login [row 2] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="18.473">
+<system-out>
+<![CDATA[✅ Login Data Driven - Invalid login completed!
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-5de43-row-2-datadriven-master-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker" classname="api/restful-booker.spec.ts" time="1.435">
+<testcase name="Login Data Driven - Invalid login [row 3] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="18.949">
+<system-out>
+<![CDATA[✅ Login Data Driven - Invalid login completed!
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-4c183-row-3-datadriven-master-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 7. Booking CRUD - Create @api @booker" classname="api/restful-booker.spec.ts" time="1.443">
+<testcase name="Login Data Driven - Invalid login [row 4] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="12.883">
+<system-out>
+<![CDATA[✅ Login Data Driven - Invalid login completed!
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-2fc2e-row-4-datadriven-master-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-2fc2e-row-4-datadriven-master-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 8. Booking CRUD - Update @api @booker" classname="api/restful-booker.spec.ts" time="1.732">
+<testcase name="Login Data Driven - Invalid login [row 5] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="16.67">
+<system-out>
+<![CDATA[✅ Login Data Driven - Invalid login completed!
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-edea8-row-5-datadriven-master-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-login-data-driven-Logi-edea8-row-5-datadriven-master-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker" classname="api/restful-booker.spec.ts" time="1.392">
+</testsuite>
+<testsuite name="web/logout.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="22.27" errors="0">
+<testcase name="Logout Flow @master @sanity @regression @web" classname="web/logout.spec.ts" time="22.27">
+<system-out>
+<![CDATA[✅ Logout completed successfully!
+
+[[ATTACHMENT|../test-results/web-logout-Logout-Flow-master-sanity-regression-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-logout-Logout-Flow-master-sanity-regression-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker" classname="api/restful-booker.spec.ts" time="1.371">
+</testsuite>
+<testsuite name="web/product-search.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.513" errors="0">
+<testcase name="Product Search Flow @master @regression @web" classname="web/product-search.spec.ts" time="16.513">
+<system-out>
+<![CDATA[✅ Product Search completed successfully!
+
+[[ATTACHMENT|../test-results/web-product-search-Product-Search-Flow-master-regression-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-product-search-Product-Search-Flow-master-regression-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
-<testcase name="Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e" classname="api/restful-booker.spec.ts" time="1.998">
+</testsuite>
+<testsuite name="web/registration.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.929" errors="0">
+<testcase name="User Registration Flow @master @sanity @regression @web" classname="web/registration.spec.ts" time="12.929">
+<system-out>
+<![CDATA[✅ User Registration completed successfully!
+
+[[ATTACHMENT|../test-results/web-registration-User-Regi-7708c-aster-sanity-regression-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-registration-User-Regi-7708c-aster-sanity-regression-web-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="web/valid-login.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.816" errors="0">
+<testcase name="Valid Login Flow @master @sanity @regression @web" classname="web/valid-login.spec.ts" time="9.816">
+<system-out>
+<![CDATA[✅ Valid Login completed successfully!
+
+[[ATTACHMENT|../test-results/web-valid-login-Valid-Logi-a63de-aster-sanity-regression-web-chromium/test-finished-1.png]]
+
+[[ATTACHMENT|../test-results/web-valid-login-Valid-Logi-a63de-aster-sanity-regression-web-chromium/video.webm]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>

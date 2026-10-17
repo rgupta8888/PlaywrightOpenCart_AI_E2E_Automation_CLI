@@ -490,5 +490,133 @@
     1998
    ]
   }
+ },
+ {
+  "time": 1792246812564,
+  "duration": 1441.673999999999,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792247277357,
+  "duration": 96320.085,
+  "passed": 10,
+  "failed": 2,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 12,
+  "tests": {
+   "chromium::tests/web/add-to-cart.spec.ts::Add Product to Cart @master @regression @web": [
+    "p",
+    18273
+   ],
+   "chromium::tests/web/end-to-end-shopping.spec.ts::End-to-End Shopping Flow @master @e2e @web": [
+    "f",
+    57385
+   ],
+   "chromium::tests/web/invalid-login.spec.ts::Invalid Login Flow @master @sanity @regression @web": [
+    "f",
+    60065
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Valid login [row 1] @datadriven @master @web": [
+    "p",
+    18166
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 2] @datadriven @master @web": [
+    "p",
+    12614
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 3] @datadriven @master @web": [
+    "p",
+    18391
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 4] @datadriven @master @web": [
+    "p",
+    14270
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 5] @datadriven @master @web": [
+    "p",
+    26787
+   ],
+   "chromium::tests/web/logout.spec.ts::Logout Flow @master @sanity @regression @web": [
+    "p",
+    18215
+   ],
+   "chromium::tests/web/product-search.spec.ts::Product Search Flow @master @regression @web": [
+    "p",
+    19655
+   ],
+   "chromium::tests/web/registration.spec.ts::User Registration Flow @master @sanity @regression @web": [
+    "p",
+    9833
+   ],
+   "chromium::tests/web/valid-login.spec.ts::Valid Login Flow @master @sanity @regression @web": [
+    "p",
+    5779
+   ]
+  }
+ },
+ {
+  "time": 1792247460539,
+  "duration": 83388.652,
+  "passed": 12,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 12,
+  "tests": {
+   "chromium::tests/web/add-to-cart.spec.ts::Add Product to Cart @master @regression @web": [
+    "p",
+    29018
+   ],
+   "chromium::tests/web/end-to-end-shopping.spec.ts::End-to-End Shopping Flow @master @e2e @web": [
+    "p",
+    68938
+   ],
+   "chromium::tests/web/invalid-login.spec.ts::Invalid Login Flow @master @sanity @regression @web": [
+    "p",
+    24816
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Valid login [row 1] @datadriven @master @web": [
+    "p",
+    23891
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 2] @datadriven @master @web": [
+    "p",
+    18473
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 3] @datadriven @master @web": [
+    "p",
+    18949
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 4] @datadriven @master @web": [
+    "p",
+    12883
+   ],
+   "chromium::tests/web/login-data-driven.spec.ts::Login Data Driven - Invalid login [row 5] @datadriven @master @web": [
+    "p",
+    16670
+   ],
+   "chromium::tests/web/logout.spec.ts::Logout Flow @master @sanity @regression @web": [
+    "p",
+    22270
+   ],
+   "chromium::tests/web/product-search.spec.ts::Product Search Flow @master @regression @web": [
+    "p",
+    16513
+   ],
+   "chromium::tests/web/registration.spec.ts::User Registration Flow @master @sanity @regression @web": [
+    "p",
+    12929
+   ],
+   "chromium::tests/web/valid-login.spec.ts::Valid Login Flow @master @sanity @regression @web": [
+    "p",
+    9816
+   ]
+  }
  }
 ]
