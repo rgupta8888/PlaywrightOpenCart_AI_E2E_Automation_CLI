@@ -1,132 +1,276 @@
-<testsuites id="" name="" tests="12" failures="0" skipped="0" errors="0" time="83.38865200000001">
-<testsuite name="web/add-to-cart.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="29.018" errors="0">
-<testcase name="Add Product to Cart @master @regression @web" classname="web/add-to-cart.spec.ts" time="29.018">
-<system-out>
-<![CDATA[✅ Add Product to Cart completed successfully!
-
-[[ATTACHMENT|../test-results/web-add-to-cart-Add-Product-to-Cart-master-regression-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-add-to-cart-Add-Product-to-Cart-master-regression-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="123" failures="0" skipped="0" errors="0" time="61.057159999999996">
+<testsuite name="api/auth.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="2" failures="0" skipped="0" time="2.507" errors="0">
+<testcase name="Authentication › 1. Successful Login @api @auth" classname="api/auth.spec.ts" time="1.312">
+</testcase>
+<testcase name="Authentication › 2. Invalid Login @api @auth" classname="api/auth.spec.ts" time="1.195">
 </testcase>
 </testsuite>
-<testsuite name="web/end-to-end-shopping.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="68.938" errors="0">
-<testcase name="End-to-End Shopping Flow @master @e2e @web" classname="web/end-to-end-shopping.spec.ts" time="68.938">
-<system-out>
-<![CDATA[✅ End-to-End Shopping completed successfully!
-
-[[ATTACHMENT|../test-results/web-end-to-end-shopping-En-b9307-hopping-Flow-master-e2e-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuite name="api/carts.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="9" failures="0" skipped="0" time="10.494" errors="0">
+<testcase name="Carts API › 20. Get All Carts @api @carts" classname="api/carts.spec.ts" time="1.34">
+</testcase>
+<testcase name="Carts API › 21. Get Cart by ID @api @carts" classname="api/carts.spec.ts" time="2.292">
+</testcase>
+<testcase name="Carts API › 22. Get Carts by Date Range @api @carts" classname="api/carts.spec.ts" time="0.845">
+</testcase>
+<testcase name="Carts API › 23. Get User Cart @api @carts" classname="api/carts.spec.ts" time="0.723">
+</testcase>
+<testcase name="Carts API › 24. Get Carts with Limit @api @carts" classname="api/carts.spec.ts" time="1.216">
+</testcase>
+<testcase name="Carts API › 25. Sort Carts @api @carts" classname="api/carts.spec.ts" time="1.19">
+</testcase>
+<testcase name="Carts API › 26. Cart CRUD - Create @api @carts @crud" classname="api/carts.spec.ts" time="0.689">
+</testcase>
+<testcase name="Carts API › 27. Cart CRUD - Update @api @carts @crud" classname="api/carts.spec.ts" time="0.677">
+</testcase>
+<testcase name="Carts API › 28. Cart CRUD - Delete @api @carts @crud" classname="api/carts.spec.ts" time="1.522">
 </testcase>
 </testsuite>
-<testsuite name="web/invalid-login.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="24.816" errors="0">
-<testcase name="Invalid Login Flow @master @sanity @regression @web" classname="web/invalid-login.spec.ts" time="24.816">
-<system-out>
-<![CDATA[✅ Invalid Login completed successfully!
-
-[[ATTACHMENT|../test-results/web-invalid-login-Invalid--f9207-aster-sanity-regression-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-invalid-login-Invalid--f9207-aster-sanity-regression-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuite name="api/dummyjson.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="78" failures="0" skipped="0" time="55.049" errors="0">
+<testcase name="Authentication › 1. Successful Login @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.645">
+</testcase>
+<testcase name="Authentication › 2. Invalid Login @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.579">
+</testcase>
+<testcase name="Authentication › 3. Get Authenticated User (Me) @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.789">
+</testcase>
+<testcase name="Authentication › 4. Refresh Token @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.814">
+</testcase>
+<testcase name="Products API › 5. Get All Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.028">
+</testcase>
+<testcase name="Products API › 6. Get Product by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.541">
+</testcase>
+<testcase name="Products API › 7. Search Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.701">
+</testcase>
+<testcase name="Products API › 8. Sort Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.026">
+</testcase>
+<testcase name="Products API › 9. Get All Product Categories @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.659">
+</testcase>
+<testcase name="Products API › 10. Get Category List @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.686">
+</testcase>
+<testcase name="Products API › 11. Get Products by Category @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.574">
+</testcase>
+<testcase name="Products API › 12. Product CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.614">
+</testcase>
+<testcase name="Products API › 13. Product CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.545">
+</testcase>
+<testcase name="Products API › 14. Product CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.503">
+</testcase>
+<testcase name="Carts API › 15. Get All Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.544">
+</testcase>
+<testcase name="Carts API › 16. Get Cart by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.572">
+</testcase>
+<testcase name="Carts API › 17. Get Carts by User @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.799">
+</testcase>
+<testcase name="Carts API › 18. Sort Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.847">
+</testcase>
+<testcase name="Carts API › 19. Cart CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.547">
+</testcase>
+<testcase name="Carts API › 20. Cart CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.587">
+</testcase>
+<testcase name="Carts API › 21. Cart CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.532">
+</testcase>
+<testcase name="Recipes API › 22. Get All Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.2">
+</testcase>
+<testcase name="Recipes API › 23. Get Recipe by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.672">
+</testcase>
+<testcase name="Recipes API › 24. Search Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.673">
+</testcase>
+<testcase name="Recipes API › 25. Sort Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.236">
+</testcase>
+<testcase name="Recipes API › 26. Get All Recipe Tags @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.679">
+</testcase>
+<testcase name="Recipes API › 27. Get Recipes by Tag @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.729">
+</testcase>
+<testcase name="Recipes API › 28. Get Recipes by Meal Type @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.583">
+</testcase>
+<testcase name="Recipes API › 29. Recipe CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.708">
+</testcase>
+<testcase name="Recipes API › 30. Recipe CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.689">
+</testcase>
+<testcase name="Recipes API › 31. Recipe CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.525">
+</testcase>
+<testcase name="Users API › 32. Get All Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.679">
+</testcase>
+<testcase name="Users API › 33. Get User by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.528">
+</testcase>
+<testcase name="Users API › 34. Search Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.527">
+</testcase>
+<testcase name="Users API › 35. Filter Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.696">
+</testcase>
+<testcase name="Users API › 36. Sort Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.225">
+</testcase>
+<testcase name="Users API › 37. Get User Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.69">
+</testcase>
+<testcase name="Users API › 38. Get User Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.653">
+</testcase>
+<testcase name="Users API › 39. Get User Todos @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.534">
+</testcase>
+<testcase name="Users API › 40. User CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.59">
+</testcase>
+<testcase name="Users API › 41. User CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.681">
+</testcase>
+<testcase name="Users API › 42. User CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.665">
+</testcase>
+<testcase name="Posts API › 43. Get All Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.193">
+</testcase>
+<testcase name="Posts API › 44. Get Post by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.783">
+</testcase>
+<testcase name="Posts API › 45. Search Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.706">
+</testcase>
+<testcase name="Posts API › 46. Sort Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.119">
+</testcase>
+<testcase name="Posts API › 47. Get All Post Tags @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.655">
+</testcase>
+<testcase name="Posts API › 48. Get Post Tag List @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.639">
+</testcase>
+<testcase name="Posts API › 49. Get Posts by Tag @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.701">
+</testcase>
+<testcase name="Posts API › 50. Get Posts by User ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.672">
+</testcase>
+<testcase name="Posts API › 51. Get Post Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.686">
+</testcase>
+<testcase name="Posts API › 52. Post CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.633">
+</testcase>
+<testcase name="Posts API › 53. Post CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.505">
+</testcase>
+<testcase name="Posts API › 54. Post CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.551">
+</testcase>
+<testcase name="Comments API › 55. Get All Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.771">
+</testcase>
+<testcase name="Comments API › 56. Get Comment by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.665">
+</testcase>
+<testcase name="Comments API › 57. Sort Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.94">
+</testcase>
+<testcase name="Comments API › 58. Get Comments by Post ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.499">
+</testcase>
+<testcase name="Comments API › 59. Comment CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.643">
+</testcase>
+<testcase name="Comments API › 60. Comment CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.557">
+</testcase>
+<testcase name="Comments API › 61. Comment CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.53">
+</testcase>
+<testcase name="Todos API › 62. Get All Todos @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.404">
+</testcase>
+<testcase name="Todos API › 63. Get Todo by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.58">
+</testcase>
+<testcase name="Todos API › 64. Get Random Todo @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.497">
+</testcase>
+<testcase name="Todos API › 65. Get Todos by User ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.522">
+</testcase>
+<testcase name="Todos API › 66. Todo CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.663">
+</testcase>
+<testcase name="Todos API › 67. Todo CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.496">
+</testcase>
+<testcase name="Todos API › 68. Todo CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.606">
+</testcase>
+<testcase name="Quotes API › 69. Get All Quotes @api @dummyjson" classname="api/dummyjson.spec.ts" time="1">
+</testcase>
+<testcase name="Quotes API › 70. Get Quote by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.502">
+</testcase>
+<testcase name="Quotes API › 71. Get Random Quote @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.689">
+</testcase>
+<testcase name="E2E Workflows › 72. Product CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.745">
+</testcase>
+<testcase name="E2E Workflows › 73. User CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.911">
+</testcase>
+<testcase name="E2E Workflows › 74. Cart CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.693">
+</testcase>
+<testcase name="E2E Workflows › 75. Recipe CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.724">
+</testcase>
+<testcase name="E2E Workflows › 76. Post CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.682">
+</testcase>
+<testcase name="E2E Workflows › 77. Comment CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.705">
+</testcase>
+<testcase name="E2E Workflows › 78. Todo CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.888">
 </testcase>
 </testsuite>
-<testsuite name="web/login-data-driven.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="5" failures="0" skipped="0" time="90.866" errors="0">
-<testcase name="Login Data Driven - Valid login [row 1] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="23.891">
-<system-out>
-<![CDATA[✅ Login Data Driven - Valid login completed!
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-d7a1b-row-1-datadriven-master-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-d7a1b-row-1-datadriven-master-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuite name="api/e2e-workflows.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.826" errors="0">
+<testcase name="E2E Workflows › 32. Product CRUD Workflow @api @e2e @products" classname="api/e2e-workflows.spec.ts" time="1.082">
 </testcase>
-<testcase name="Login Data Driven - Invalid login [row 2] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="18.473">
-<system-out>
-<![CDATA[✅ Login Data Driven - Invalid login completed!
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-5de43-row-2-datadriven-master-web-chromium/video.webm]]
-]]>
-</system-out>
+<testcase name="E2E Workflows › 33. User CRUD Workflow @api @e2e @users" classname="api/e2e-workflows.spec.ts" time="1.607">
 </testcase>
-<testcase name="Login Data Driven - Invalid login [row 3] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="18.949">
-<system-out>
-<![CDATA[✅ Login Data Driven - Invalid login completed!
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-4c183-row-3-datadriven-master-web-chromium/video.webm]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Login Data Driven - Invalid login [row 4] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="12.883">
-<system-out>
-<![CDATA[✅ Login Data Driven - Invalid login completed!
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-2fc2e-row-4-datadriven-master-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-2fc2e-row-4-datadriven-master-web-chromium/video.webm]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Login Data Driven - Invalid login [row 5] @datadriven @master @web" classname="web/login-data-driven.spec.ts" time="16.67">
-<system-out>
-<![CDATA[✅ Login Data Driven - Invalid login completed!
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-edea8-row-5-datadriven-master-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-login-data-driven-Logi-edea8-row-5-datadriven-master-web-chromium/video.webm]]
-]]>
-</system-out>
+<testcase name="E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts" classname="api/e2e-workflows.spec.ts" time="1.137">
 </testcase>
 </testsuite>
-<testsuite name="web/logout.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="22.27" errors="0">
-<testcase name="Logout Flow @master @sanity @regression @web" classname="web/logout.spec.ts" time="22.27">
-<system-out>
-<![CDATA[✅ Logout completed successfully!
-
-[[ATTACHMENT|../test-results/web-logout-Logout-Flow-master-sanity-regression-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-logout-Logout-Flow-master-sanity-regression-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuite name="api/products.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="10" failures="0" skipped="0" time="6.488" errors="0">
+<testcase name="Products API › 3. Get All Products @api @products" classname="api/products.spec.ts" time="0.745">
+</testcase>
+<testcase name="Products API › 4. Get Product by ID @api @products" classname="api/products.spec.ts" time="0.603">
+</testcase>
+<testcase name="Products API › 5. Get Products with Limit @api @products" classname="api/products.spec.ts" time="0.555">
+</testcase>
+<testcase name="Products API › 6. Sort Products Ascending @api @products" classname="api/products.spec.ts" time="0.758">
+</testcase>
+<testcase name="Products API › 7. Sort Products Descending @api @products" classname="api/products.spec.ts" time="0.61">
+</testcase>
+<testcase name="Products API › 8. Get All Product Categories @api @products" classname="api/products.spec.ts" time="0.514">
+</testcase>
+<testcase name="Products API › 9. Get Products by Category @api @products" classname="api/products.spec.ts" time="0.834">
+</testcase>
+<testcase name="Products API › 10. Product CRUD - Create @api @products @crud" classname="api/products.spec.ts" time="0.496">
+</testcase>
+<testcase name="Products API › 11. Product CRUD - Update @api @products @crud" classname="api/products.spec.ts" time="0.673">
+</testcase>
+<testcase name="Products API › 12. Product CRUD - Delete @api @products @crud" classname="api/products.spec.ts" time="0.7">
 </testcase>
 </testsuite>
-<testsuite name="web/product-search.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.513" errors="0">
-<testcase name="Product Search Flow @master @regression @web" classname="web/product-search.spec.ts" time="16.513">
-<system-out>
-<![CDATA[✅ Product Search completed successfully!
-
-[[ATTACHMENT|../test-results/web-product-search-Product-Search-Flow-master-regression-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-product-search-Product-Search-Flow-master-regression-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuite name="api/restful-booker.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="11" failures="0" skipped="0" time="17.447" errors="0">
+<testcase name="Restful Booker API Tests › 1. Successful Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.941">
+<properties>
+<property name="priority" value="P1">
+</property>
+<property name="severity" value="critical">
+</property>
+<property name="owner" value="rahul">
+</property>
+<property name="feature" value="login API">
+</property>
+<property name="story" value="Login-231">
+</property>
+</properties>
+</testcase>
+<testcase name="Restful Booker API Tests › 2. Invalid Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.729">
+</testcase>
+<testcase name="Restful Booker API Tests › 3. Get All Bookings @api @booker" classname="api/restful-booker.spec.ts" time="6.612">
+</testcase>
+<testcase name="Restful Booker API Tests › 4. Get Booking by ID @api @booker" classname="api/restful-booker.spec.ts" time="1.043">
+</testcase>
+<testcase name="Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker" classname="api/restful-booker.spec.ts" time="0.968">
+</testcase>
+<testcase name="Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker" classname="api/restful-booker.spec.ts" time="0.979">
+</testcase>
+<testcase name="Restful Booker API Tests › 7. Booking CRUD - Create @api @booker" classname="api/restful-booker.spec.ts" time="0.74">
+</testcase>
+<testcase name="Restful Booker API Tests › 8. Booking CRUD - Update @api @booker" classname="api/restful-booker.spec.ts" time="1.234">
+</testcase>
+<testcase name="Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker" classname="api/restful-booker.spec.ts" time="1.242">
+</testcase>
+<testcase name="Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker" classname="api/restful-booker.spec.ts" time="1.22">
+</testcase>
+<testcase name="Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e" classname="api/restful-booker.spec.ts" time="1.739">
 </testcase>
 </testsuite>
-<testsuite name="web/registration.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.929" errors="0">
-<testcase name="User Registration Flow @master @sanity @regression @web" classname="web/registration.spec.ts" time="12.929">
-<system-out>
-<![CDATA[✅ User Registration completed successfully!
-
-[[ATTACHMENT|../test-results/web-registration-User-Regi-7708c-aster-sanity-regression-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-registration-User-Regi-7708c-aster-sanity-regression-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuite name="api/schema-validation.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.256" errors="0">
+<testcase name="JSON Schema Validation › 29. Product Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="1.074">
+</testcase>
+<testcase name="JSON Schema Validation › 30. User Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="1.18">
+</testcase>
+<testcase name="JSON Schema Validation › 31. Cart Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="1.002">
 </testcase>
 </testsuite>
-<testsuite name="web/valid-login.spec.ts" timestamp="2026-10-17T14:31:00.515Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.816" errors="0">
-<testcase name="Valid Login Flow @master @sanity @regression @web" classname="web/valid-login.spec.ts" time="9.816">
-<system-out>
-<![CDATA[✅ Valid Login completed successfully!
-
-[[ATTACHMENT|../test-results/web-valid-login-Valid-Logi-a63de-aster-sanity-regression-web-chromium/test-finished-1.png]]
-
-[[ATTACHMENT|../test-results/web-valid-login-Valid-Logi-a63de-aster-sanity-regression-web-chromium/video.webm]]
-]]>
-</system-out>
+<testsuite name="api/users.spec.ts" timestamp="2026-10-17T19:22:59.499Z" hostname="chromium" tests="7" failures="0" skipped="0" time="5.666" errors="0">
+<testcase name="Users API › 13. Get All Users @api @users" classname="api/users.spec.ts" time="0.685">
+</testcase>
+<testcase name="Users API › 14. Get User by ID @api @users" classname="api/users.spec.ts" time="0.886">
+</testcase>
+<testcase name="Users API › 15. Get Users with Limit @api @users" classname="api/users.spec.ts" time="0.893">
+</testcase>
+<testcase name="Users API › 16. Sort Users @api @users" classname="api/users.spec.ts" time="1.067">
+</testcase>
+<testcase name="Users API › 17. User CRUD - Create @api @users @crud" classname="api/users.spec.ts" time="0.824">
+</testcase>
+<testcase name="Users API › 18. User CRUD - Update @api @users @crud" classname="api/users.spec.ts" time="0.518">
+</testcase>
+<testcase name="Users API › 19. User CRUD - Delete @api @users @crud" classname="api/users.spec.ts" time="0.793">
 </testcase>
 </testsuite>
 </testsuites>

@@ -225,4 +225,160 @@ export class RandomDataUtil {
             lastname: this.getLastName(),
         };
     }
+
+    // 2.6 DummyJSON API Payload Generators
+    //
+    // Reference: https://dummyjson.com/docs
+    //
+    // These payloads are intended for the DummyJSON API endpoints defined in
+    // api/endpoints/dummyJsonroutes.ts. The API requests themselves must be
+    // implemented in Playwright API tests, not in RandomDataUtil.
+
+    static generateDummyJsonAuthPayload() {
+        return {
+            username: this.getUsername(),
+            password: this.getPassword(),
+        };
+    }
+
+    static generateDummyJsonProductPayload() {
+        return {
+            title: this.getProductName(),
+            description: this.getProductDescription(),
+            price: Number(this.getProductPrice()),
+            discountPercentage: faker.number.int({ min: 5, max: 50 }),
+            rating: faker.number.int({ min: 1, max: 5 }),
+            stock: faker.number.int({ min: 1, max: 200 }),
+            brand: faker.lorem.word(),
+            category: this.getDepartment().toLowerCase(),
+            thumbnail: this.getImageUrl(),
+            images: [this.getImageUrl(), this.getImageUrl()],
+        };
+    }
+
+    static generateUpdatedDummyJsonProductPayload() {
+        const payload = this.generateDummyJsonProductPayload();
+        return {
+            ...payload,
+            title: `Updated ${payload.title}`,
+        };
+    }
+
+    static generateDummyJsonCartPayload(userId: number) {
+        return {
+            userId,
+            products: [
+                {
+                    id: this.getNumber(),
+                    quantity: this.getNumber(),
+                },
+            ],
+        };
+    }
+
+    static generateUpdatedDummyJsonCartPayload(userId: number) {
+        return {
+            userId,
+            products: [
+                {
+                    id: this.getNumber(),
+                    quantity: this.getNumber(),
+                },
+            ],
+        };
+    }
+
+    static generateDummyJsonRecipePayload() {
+        return {
+            name: faker.lorem.words(3),
+            ingredients: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
+            instructions: [faker.lorem.sentence(), faker.lorem.sentence()],
+            prepTimeMinutes: faker.number.int({ min: 5, max: 60 }),
+            cookTimeMinutes: faker.number.int({ min: 10, max: 120 }),
+            servings: faker.number.int({ min: 1, max: 8 }),
+            difficulty: faker.helpers.arrayElement(['easy', 'medium', 'hard']),
+            cuisine: faker.lorem.word(),
+            caloriesPerServing: faker.number.int({ min: 100, max: 800 }),
+            tags: [faker.lorem.word(), faker.lorem.word()],
+            userId: 1,
+            image: this.getImageUrl(),
+            mealType: faker.helpers.arrayElement(['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']),
+        };
+    }
+
+    static generateUpdatedDummyJsonRecipePayload() {
+        const payload = this.generateDummyJsonRecipePayload();
+        return {
+            ...payload,
+            name: `Updated ${payload.name}`,
+        };
+    }
+
+    static generateDummyJsonUserPayload() {
+        return {
+            firstName: this.getFirstName(),
+            lastName: this.getLastName(),
+            email: this.getEmail(),
+            password: this.getPassword(),
+            phone: this.getPhoneNumber(),
+            username: this.getUsername(),
+        };
+    }
+
+    static generateUpdatedDummyJsonUserPayload() {
+        const payload = this.generateDummyJsonUserPayload();
+        return {
+            ...payload,
+            firstName: `Updated ${payload.firstName}`,
+        };
+    }
+
+    static generateDummyJsonPostPayload(userId: number) {
+        return {
+            title: faker.lorem.sentence(),
+            body: faker.lorem.paragraph(),
+            userId,
+            tags: [faker.lorem.word(), faker.lorem.word()],
+        };
+    }
+
+    static generateUpdatedDummyJsonPostPayload(userId: number) {
+        const payload = this.generateDummyJsonPostPayload(userId);
+        return {
+            ...payload,
+            title: `Updated ${payload.title}`,
+        };
+    }
+
+    static generateDummyJsonCommentPayload(postId: number) {
+        return {
+            body: faker.lorem.sentence(),
+            postId,
+            userId: 1,
+        };
+    }
+
+    static generateUpdatedDummyJsonCommentPayload(postId: number) {
+        const payload = this.generateDummyJsonCommentPayload(postId);
+        return {
+            ...payload,
+            body: `Updated ${payload.body}`,
+        };
+    }
+
+    static generateDummyJsonTodoPayload(userId: number) {
+        return {
+            todo: faker.lorem.sentence(),
+            completed: false,
+            userId,
+        };
+    }
+
+    static generateUpdatedDummyJsonTodoPayload(userId: number) {
+        const payload = this.generateDummyJsonTodoPayload(userId);
+        return {
+            ...payload,
+            todo: `Updated ${payload.todo}`,
+        };
+    }
 }

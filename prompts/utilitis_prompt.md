@@ -226,6 +226,133 @@ Do not add API request methods, HTTP clients, additional classes, interfaces, ty
 
 The existing `utils/dataGenerator.ts` file exports `RandomDataUtil` with its existing methods and the four additional Restful Booker payload generators, supporting CRUD API testing using Playwright.
 
+### 2.6 DummyJSON API Payload Generators
+
+Reference link: https://dummyjson.com/docs
+
+Use the existing `@faker-js/faker` dependency and the existing methods within `RandomDataUtil` wherever applicable.
+
+Implement exactly these additional static methods:
+
+* `generateDummyJsonAuthPayload()`
+* `generateDummyJsonProductPayload()`
+* `generateUpdatedDummyJsonProductPayload()`
+* `generateDummyJsonCartPayload(userId: number)`
+* `generateUpdatedDummyJsonCartPayload(userId: number)`
+* `generateDummyJsonRecipePayload()`
+* `generateUpdatedDummyJsonRecipePayload()`
+* `generateDummyJsonUserPayload()`
+* `generateUpdatedDummyJsonUserPayload()`
+* `generateDummyJsonPostPayload(userId: number)`
+* `generateUpdatedDummyJsonPostPayload(userId: number)`
+* `generateDummyJsonCommentPayload(postId: number)`
+* `generateUpdatedDummyJsonCommentPayload(postId: number)`
+* `generateDummyJsonTodoPayload(userId: number)`
+* `generateUpdatedDummyJsonTodoPayload(userId: number)`
+
+Required return structures:
+
+* `generateDummyJsonAuthPayload()` must return:
+  * `username` generated using `getUsername()`
+  * `password` generated using `getPassword()`
+
+* `generateDummyJsonProductPayload()` must return:
+  * `title`
+  * `description`
+  * `price` as a number
+  * `discountPercentage` as a number
+  * `rating` as a number
+  * `stock` as a number
+  * `brand`
+  * `category` in lowercase
+  * `thumbnail`
+  * `images` as an array of two image URLs
+
+* `generateUpdatedDummyJsonProductPayload()` must return the same product payload structure, with the `title` prefixed with `Updated `.
+
+* `generateDummyJsonCartPayload(userId: number)` must return:
+  * `userId`
+  * `products` as an array of objects with:
+    * `id`
+    * `quantity`
+
+* `generateUpdatedDummyJsonCartPayload(userId: number)` must return the same cart payload structure.
+
+* `generateDummyJsonRecipePayload()` must return:
+  * `name`
+  * `ingredients` as an array of strings
+  * `instructions` as an array of strings
+  * `prepTimeMinutes` as a number
+  * `cookTimeMinutes` as a number
+  * `servings` as a number
+  * `difficulty` — one of `easy`, `medium`, or `hard`
+  * `cuisine`
+  * `caloriesPerServing` as a number
+  * `tags` as an array of strings
+  * `userId` as `1`
+  * `image`
+  * `mealType` — one of `Breakfast`, `Lunch`, `Dinner`, `Snack`, or `Dessert`
+
+* `generateUpdatedDummyJsonRecipePayload()` must return the same recipe payload structure, with the `name` prefixed with `Updated `.
+
+* `generateDummyJsonUserPayload()` must return:
+  * `firstName`
+  * `lastName`
+  * `email`
+  * `password`
+  * `phone`
+  * `username`
+
+* `generateUpdatedDummyJsonUserPayload()` must return the same user payload structure, with the `firstName` prefixed with `Updated `.
+
+* `generateDummyJsonPostPayload(userId: number)` must return:
+  * `title`
+  * `body`
+  * `userId`
+  * `tags` as an array of strings
+
+* `generateUpdatedDummyJsonPostPayload(userId: number)` must return the same post payload structure, with the `title` prefixed with `Updated `.
+
+* `generateDummyJsonCommentPayload(postId: number)` must return:
+  * `body`
+  * `postId`
+  * `userId` as `1`
+
+* `generateUpdatedDummyJsonCommentPayload(postId: number)` must return the same comment payload structure, with the `body` prefixed with `Updated `.
+
+* `generateDummyJsonTodoPayload(userId: number)` must return:
+  * `todo`
+  * `completed` as `false`
+  * `userId`
+
+* `generateUpdatedDummyJsonTodoPayload(userId: number)` must return the same todo payload structure, with the `todo` prefixed with `Updated `.
+
+These payloads are intended for the DummyJSON API endpoints defined in `api/endpoints/dummyJsonroutes.ts`:
+
+* `POST /auth/login` — Authenticate a user.
+* `POST /products/add` — Create a product.
+* `PUT /products/{id}` — Update a product.
+* `POST /carts/add` — Create a cart.
+* `PUT /carts/{id}` — Update a cart.
+* `POST /recipes/add` — Create a recipe.
+* `PUT /recipes/{id}` — Update a recipe.
+* `POST /users/add` — Create a user.
+* `PUT /users/{id}` — Update a user.
+* `POST /posts/add` — Create a post.
+* `PUT /posts/{id}` — Update a post.
+* `POST /comments/add` — Create a comment.
+* `PUT /comments/{id}` — Update a comment.
+* `POST /todos/add` — Create a todo.
+* `PUT /todos/{id}` — Update a todo.
+
+The API requests themselves must be implemented in Playwright API tests, not in `RandomDataUtil`.
+
+Do not add API request methods, HTTP clients, additional classes, interfaces, types, constants, dependencies, or files.
+
+### Expected Result
+
+The existing `utils/dataGenerator.ts` file exports `RandomDataUtil` with its existing methods and the fifteen additional DummyJSON payload generators, supporting CRUD API testing using Playwright.
+
 ---
 
 # 3. Create `dbClient.ts`
