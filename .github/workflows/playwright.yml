@@ -19,6 +19,7 @@ on:
           - test:e2e
           - test:api
           - test:booker
+          - test:dummyjson
           - test:web
           - test:datadriven
         default: "test:e2e"
