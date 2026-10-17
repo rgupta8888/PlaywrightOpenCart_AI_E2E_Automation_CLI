@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { bookerRoutes } from '../../api/endpoints/bookerRoutes';
 import { RandomDataUtil } from '../../utils/dataGenerator';
+import { meta , log } from 'reporting-labs';
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${bookerRoutes.BASE_URL}${template}`;
@@ -27,6 +28,10 @@ test.describe('Restful Booker API Tests', () => {
     // ---------------------------------------------------------
 
     test('1. Successful Authentication @api @booker', async ({ request }) => {
+        
+        meta({ priority: 'P1', severity: 'critical', owner: 'rahul', feature: 'login API', story: 'Login-231'});
+
+        await log('Starting Successful Authentication Test');
         const url = buildUrl(bookerRoutes.CREATE_TOKEN);
         const payload = RandomDataUtil.generateRestfulBookerAuthPayload();
 
@@ -38,6 +43,7 @@ test.describe('Restful Booker API Tests', () => {
         expect(body).toHaveProperty('token');
         expect(typeof body.token).toBe('string');
         expect(body.token.length).toBeGreaterThan(0);
+        await log('Completed Successful Authentication Test');
     });
 
     test('2. Invalid Authentication @api @booker', async ({ request }) => {

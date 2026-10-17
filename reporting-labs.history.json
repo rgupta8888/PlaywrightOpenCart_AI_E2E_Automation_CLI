@@ -1,0 +1,494 @@
+[
+ {
+  "time": 1792229843952,
+  "duration": 38729.836,
+  "passed": 45,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 45,
+  "tests": {
+   "chromium::tests/api/auth.spec.ts::Authentication › 1. Successful Login @api @auth": [
+    "p",
+    1541
+   ],
+   "chromium::tests/api/auth.spec.ts::Authentication › 2. Invalid Login @api @auth": [
+    "p",
+    1283
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 20. Get All Carts @api @carts": [
+    "p",
+    1128
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 21. Get Cart by ID @api @carts": [
+    "p",
+    1219
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 22. Get Carts by Date Range @api @carts": [
+    "p",
+    725
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 23. Get User Cart @api @carts": [
+    "p",
+    851
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 24. Get Carts with Limit @api @carts": [
+    "p",
+    779
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 25. Sort Carts @api @carts": [
+    "p",
+    1041
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 26. Cart CRUD - Create @api @carts @crud": [
+    "p",
+    578
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 27. Cart CRUD - Update @api @carts @crud": [
+    "p",
+    964
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 28. Cart CRUD - Delete @api @carts @crud": [
+    "p",
+    781
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 32. Product CRUD Workflow @api @e2e @products": [
+    "p",
+    1327
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 33. User CRUD Workflow @api @e2e @users": [
+    "p",
+    1438
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts": [
+    "p",
+    1321
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 3. Get All Products @api @products": [
+    "p",
+    1194
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 4. Get Product by ID @api @products": [
+    "p",
+    1159
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 5. Get Products with Limit @api @products": [
+    "p",
+    755
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 6. Sort Products Ascending @api @products": [
+    "p",
+    718
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 7. Sort Products Descending @api @products": [
+    "p",
+    638
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 8. Get All Product Categories @api @products": [
+    "p",
+    510
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 9. Get Products by Category @api @products": [
+    "p",
+    740
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 10. Product CRUD - Create @api @products @crud": [
+    "p",
+    727
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 11. Product CRUD - Update @api @products @crud": [
+    "p",
+    494
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 12. Product CRUD - Delete @api @products @crud": [
+    "p",
+    568
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 1. Successful Authentication @api @booker": [
+    "p",
+    1159
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 2. Invalid Authentication @api @booker": [
+    "p",
+    903
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 3. Get All Bookings @api @booker": [
+    "p",
+    18912
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 4. Get Booking by ID @api @booker": [
+    "p",
+    1151
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker": [
+    "p",
+    1024
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker": [
+    "p",
+    1085
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 7. Booking CRUD - Create @api @booker": [
+    "p",
+    866
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 8. Booking CRUD - Update @api @booker": [
+    "p",
+    1813
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker": [
+    "p",
+    1352
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker": [
+    "p",
+    1393
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e": [
+    "p",
+    1913
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 29. Product Response Schema @api @schema": [
+    "p",
+    1308
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 30. User Response Schema @api @schema": [
+    "p",
+    1424
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 31. Cart Response Schema @api @schema": [
+    "p",
+    2551
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 13. Get All Users @api @users": [
+    "p",
+    726
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 14. Get User by ID @api @users": [
+    "p",
+    928
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 15. Get Users with Limit @api @users": [
+    "p",
+    776
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 16. Sort Users @api @users": [
+    "p",
+    1263
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 17. User CRUD - Create @api @users @crud": [
+    "p",
+    695
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 18. User CRUD - Update @api @users @crud": [
+    "p",
+    518
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 19. User CRUD - Delete @api @users @crud": [
+    "p",
+    729
+   ]
+  }
+ },
+ {
+  "time": 1792230962186,
+  "duration": 38380.10899999994,
+  "passed": 45,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 45,
+  "tests": {
+   "chromium::tests/api/auth.spec.ts::Authentication › 1. Successful Login @api @auth": [
+    "p",
+    1272
+   ],
+   "chromium::tests/api/auth.spec.ts::Authentication › 2. Invalid Login @api @auth": [
+    "p",
+    1429
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 20. Get All Carts @api @carts": [
+    "p",
+    994
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 21. Get Cart by ID @api @carts": [
+    "p",
+    1011
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 22. Get Carts by Date Range @api @carts": [
+    "p",
+    649
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 23. Get User Cart @api @carts": [
+    "p",
+    857
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 24. Get Carts with Limit @api @carts": [
+    "p",
+    750
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 25. Sort Carts @api @carts": [
+    "p",
+    1189
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 26. Cart CRUD - Create @api @carts @crud": [
+    "p",
+    748
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 27. Cart CRUD - Update @api @carts @crud": [
+    "p",
+    560
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 28. Cart CRUD - Delete @api @carts @crud": [
+    "p",
+    828
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 32. Product CRUD Workflow @api @e2e @products": [
+    "p",
+    979
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 33. User CRUD Workflow @api @e2e @users": [
+    "p",
+    1143
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts": [
+    "p",
+    1104
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 3. Get All Products @api @products": [
+    "p",
+    653
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 4. Get Product by ID @api @products": [
+    "p",
+    513
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 5. Get Products with Limit @api @products": [
+    "p",
+    560
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 6. Sort Products Ascending @api @products": [
+    "p",
+    748
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 7. Sort Products Descending @api @products": [
+    "p",
+    746
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 8. Get All Product Categories @api @products": [
+    "p",
+    538
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 9. Get Products by Category @api @products": [
+    "p",
+    705
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 10. Product CRUD - Create @api @products @crud": [
+    "p",
+    563
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 11. Product CRUD - Update @api @products @crud": [
+    "p",
+    538
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 12. Product CRUD - Delete @api @products @crud": [
+    "p",
+    717
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 1. Successful Authentication @api @booker": [
+    "p",
+    845
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 2. Invalid Authentication @api @booker": [
+    "p",
+    744
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 3. Get All Bookings @api @booker": [
+    "p",
+    16757
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 4. Get Booking by ID @api @booker": [
+    "p",
+    1140
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker": [
+    "p",
+    1108
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker": [
+    "p",
+    1184
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 7. Booking CRUD - Create @api @booker": [
+    "p",
+    911
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 8. Booking CRUD - Update @api @booker": [
+    "p",
+    1398
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker": [
+    "p",
+    1342
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker": [
+    "p",
+    1403
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e": [
+    "p",
+    1970
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 29. Product Response Schema @api @schema": [
+    "p",
+    1161
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 30. User Response Schema @api @schema": [
+    "p",
+    1430
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 31. Cart Response Schema @api @schema": [
+    "p",
+    2057
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 13. Get All Users @api @users": [
+    "p",
+    743
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 14. Get User by ID @api @users": [
+    "p",
+    1017
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 15. Get Users with Limit @api @users": [
+    "p",
+    649
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 16. Sort Users @api @users": [
+    "p",
+    1081
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 17. User CRUD - Create @api @users @crud": [
+    "p",
+    726
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 18. User CRUD - Update @api @users @crud": [
+    "p",
+    662
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 19. User CRUD - Delete @api @users @crud": [
+    "p",
+    675
+   ]
+  }
+ },
+ {
+  "time": 1792231312127,
+  "duration": 25661.28199999989,
+  "passed": 11,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 11,
+  "tests": {
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 1. Successful Authentication @api @booker": [
+    "p",
+    2023
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 2. Invalid Authentication @api @booker": [
+    "p",
+    2027
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 3. Get All Bookings @api @booker": [
+    "p",
+    8400
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 4. Get Booking by ID @api @booker": [
+    "p",
+    2480
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker": [
+    "p",
+    1535
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker": [
+    "p",
+    1316
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 7. Booking CRUD - Create @api @booker": [
+    "p",
+    1334
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 8. Booking CRUD - Update @api @booker": [
+    "p",
+    1544
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker": [
+    "p",
+    1438
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker": [
+    "p",
+    1306
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e": [
+    "p",
+    2113
+   ]
+  }
+ },
+ {
+  "time": 1792231602343,
+  "duration": 27090.875000000004,
+  "passed": 11,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 11,
+  "tests": {
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 1. Successful Authentication @api @booker": [
+    "p",
+    1634
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 2. Invalid Authentication @api @booker": [
+    "p",
+    1413
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 3. Get All Bookings @api @booker": [
+    "p",
+    19008
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 4. Get Booking by ID @api @booker": [
+    "p",
+    1967
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker": [
+    "p",
+    1452
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker": [
+    "p",
+    1435
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 7. Booking CRUD - Create @api @booker": [
+    "p",
+    1443
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 8. Booking CRUD - Update @api @booker": [
+    "p",
+    1732
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker": [
+    "p",
+    1392
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker": [
+    "p",
+    1371
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e": [
+    "p",
+    1998
+   ]
+  }
+ }
+]

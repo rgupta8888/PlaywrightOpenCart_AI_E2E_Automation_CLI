@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import reportingLabs from './reporting-labs.config';
 
 export default defineConfig({
   timeout: 30 * 1000, //30000 ms(30 secs)
@@ -14,12 +15,15 @@ export default defineConfig({
     //['json', { outputFile: 'reports/results.json' }], // JSON Report
     ["junit", { outputFile: "reports/results.xml" }], // JUnit XML Report
     ["./utils/CustomReporter.ts"], // Custom reporter
+    ['reporting-labs', reportingLabs],
     ["allure-playwright", { outputFolder: "allure-results" }], // Allure Report
   ],
   use: {
     trace: "on-first-retry",
-    screenshot: "only-on-failure",
-    video: "retain-on-failure",
+    //screenshot: "only-on-failure",
+    //video: "retain-on-failure",
+    screenshot: "on",
+    video: "on",
     headless: false,
     viewport: { width: 1280, height: 720 }, // Set default viewport size for consistency
     ignoreHTTPSErrors: true, // Ignore SSL errors if necessary
