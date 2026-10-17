@@ -1444,5 +1444,508 @@
     793
    ]
   }
+ },
+ {
+  "time": 1792266781720,
+  "duration": 43906.804999999935,
+  "passed": 123,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 123,
+  "tests": {
+   "chromium::tests/api/auth.spec.ts::Authentication › 1. Successful Login @api @auth": [
+    "p",
+    953
+   ],
+   "chromium::tests/api/auth.spec.ts::Authentication › 2. Invalid Login @api @auth": [
+    "p",
+    915
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 20. Get All Carts @api @carts": [
+    "p",
+    1010
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 21. Get Cart by ID @api @carts": [
+    "p",
+    918
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 22. Get Carts by Date Range @api @carts": [
+    "p",
+    622
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 23. Get User Cart @api @carts": [
+    "p",
+    624
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 24. Get Carts with Limit @api @carts": [
+    "p",
+    610
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 25. Sort Carts @api @carts": [
+    "p",
+    949
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 26. Cart CRUD - Create @api @carts @crud": [
+    "p",
+    698
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 27. Cart CRUD - Update @api @carts @crud": [
+    "p",
+    518
+   ],
+   "chromium::tests/api/carts.spec.ts::Carts API › 28. Cart CRUD - Delete @api @carts @crud": [
+    "p",
+    880
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Authentication › 1. Successful Login @api @dummyjson": [
+    "p",
+    683
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Authentication › 2. Invalid Login @api @dummyjson": [
+    "p",
+    707
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Authentication › 3. Get Authenticated User (Me) @api @dummyjson": [
+    "p",
+    844
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Authentication › 4. Refresh Token @api @dummyjson": [
+    "p",
+    993
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 5. Get All Products @api @dummyjson": [
+    "p",
+    956
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 6. Get Product by ID @api @dummyjson": [
+    "p",
+    492
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 7. Search Products @api @dummyjson": [
+    "p",
+    511
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 8. Sort Products @api @dummyjson": [
+    "p",
+    867
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 9. Get All Product Categories @api @dummyjson": [
+    "p",
+    491
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 10. Get Category List @api @dummyjson": [
+    "p",
+    514
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 11. Get Products by Category @api @dummyjson": [
+    "p",
+    515
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 12. Product CRUD - Create @api @dummyjson": [
+    "p",
+    507
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 13. Product CRUD - Update @api @dummyjson": [
+    "p",
+    603
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Products API › 14. Product CRUD - Delete @api @dummyjson": [
+    "p",
+    526
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Carts API › 15. Get All Carts @api @dummyjson": [
+    "p",
+    582
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Carts API › 16. Get Cart by ID @api @dummyjson": [
+    "p",
+    534
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Carts API › 17. Get Carts by User @api @dummyjson": [
+    "p",
+    589
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Carts API › 18. Sort Carts @api @dummyjson": [
+    "p",
+    939
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Carts API › 19. Cart CRUD - Create @api @dummyjson": [
+    "p",
+    545
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Carts API › 20. Cart CRUD - Update @api @dummyjson": [
+    "p",
+    594
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Carts API › 21. Cart CRUD - Delete @api @dummyjson": [
+    "p",
+    535
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 22. Get All Recipes @api @dummyjson": [
+    "p",
+    1106
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 23. Get Recipe by ID @api @dummyjson": [
+    "p",
+    589
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 24. Search Recipes @api @dummyjson": [
+    "p",
+    575
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 25. Sort Recipes @api @dummyjson": [
+    "p",
+    1237
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 26. Get All Recipe Tags @api @dummyjson": [
+    "p",
+    540
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 27. Get Recipes by Tag @api @dummyjson": [
+    "p",
+    648
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 28. Get Recipes by Meal Type @api @dummyjson": [
+    "p",
+    760
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 29. Recipe CRUD - Create @api @dummyjson": [
+    "p",
+    754
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 30. Recipe CRUD - Update @api @dummyjson": [
+    "p",
+    624
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Recipes API › 31. Recipe CRUD - Delete @api @dummyjson": [
+    "p",
+    758
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 32. Get All Users @api @dummyjson": [
+    "p",
+    474
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 33. Get User by ID @api @dummyjson": [
+    "p",
+    715
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 34. Search Users @api @dummyjson": [
+    "p",
+    508
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 35. Filter Users @api @dummyjson": [
+    "p",
+    744
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 36. Sort Users @api @dummyjson": [
+    "p",
+    992
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 37. Get User Carts @api @dummyjson": [
+    "p",
+    549
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 38. Get User Posts @api @dummyjson": [
+    "p",
+    506
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 39. Get User Todos @api @dummyjson": [
+    "p",
+    673
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 40. User CRUD - Create @api @dummyjson": [
+    "p",
+    1595
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 41. User CRUD - Update @api @dummyjson": [
+    "p",
+    686
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Users API › 42. User CRUD - Delete @api @dummyjson": [
+    "p",
+    476
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 43. Get All Posts @api @dummyjson": [
+    "p",
+    771
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 44. Get Post by ID @api @dummyjson": [
+    "p",
+    489
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 45. Search Posts @api @dummyjson": [
+    "p",
+    665
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 46. Sort Posts @api @dummyjson": [
+    "p",
+    1015
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 47. Get All Post Tags @api @dummyjson": [
+    "p",
+    468
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 48. Get Post Tag List @api @dummyjson": [
+    "p",
+    540
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 49. Get Posts by Tag @api @dummyjson": [
+    "p",
+    786
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 50. Get Posts by User ID @api @dummyjson": [
+    "p",
+    584
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 51. Get Post Comments @api @dummyjson": [
+    "p",
+    500
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 52. Post CRUD - Create @api @dummyjson": [
+    "p",
+    517
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 53. Post CRUD - Update @api @dummyjson": [
+    "p",
+    485
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Posts API › 54. Post CRUD - Delete @api @dummyjson": [
+    "p",
+    508
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Comments API › 55. Get All Comments @api @dummyjson": [
+    "p",
+    1262
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Comments API › 56. Get Comment by ID @api @dummyjson": [
+    "p",
+    530
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Comments API › 57. Sort Comments @api @dummyjson": [
+    "p",
+    896
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Comments API › 58. Get Comments by Post ID @api @dummyjson": [
+    "p",
+    579
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Comments API › 59. Comment CRUD - Create @api @dummyjson": [
+    "p",
+    515
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Comments API › 60. Comment CRUD - Update @api @dummyjson": [
+    "p",
+    559
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Comments API › 61. Comment CRUD - Delete @api @dummyjson": [
+    "p",
+    473
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Todos API › 62. Get All Todos @api @dummyjson": [
+    "p",
+    937
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Todos API › 63. Get Todo by ID @api @dummyjson": [
+    "p",
+    837
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Todos API › 64. Get Random Todo @api @dummyjson": [
+    "p",
+    573
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Todos API › 65. Get Todos by User ID @api @dummyjson": [
+    "p",
+    604
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Todos API › 66. Todo CRUD - Create @api @dummyjson": [
+    "p",
+    498
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Todos API › 67. Todo CRUD - Update @api @dummyjson": [
+    "p",
+    502
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Todos API › 68. Todo CRUD - Delete @api @dummyjson": [
+    "p",
+    586
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Quotes API › 69. Get All Quotes @api @dummyjson": [
+    "p",
+    619
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Quotes API › 70. Get Quote by ID @api @dummyjson": [
+    "p",
+    695
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::Quotes API › 71. Get Random Quote @api @dummyjson": [
+    "p",
+    473
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::E2E Workflows › 72. Product CRUD Workflow @api @e2e @dummyjson": [
+    "p",
+    714
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::E2E Workflows › 73. User CRUD Workflow @api @e2e @dummyjson": [
+    "p",
+    712
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::E2E Workflows › 74. Cart CRUD Workflow @api @e2e @dummyjson": [
+    "p",
+    809
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::E2E Workflows › 75. Recipe CRUD Workflow @api @e2e @dummyjson": [
+    "p",
+    626
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::E2E Workflows › 76. Post CRUD Workflow @api @e2e @dummyjson": [
+    "p",
+    709
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::E2E Workflows › 77. Comment CRUD Workflow @api @e2e @dummyjson": [
+    "p",
+    823
+   ],
+   "chromium::tests/api/dummyjson.spec.ts::E2E Workflows › 78. Todo CRUD Workflow @api @e2e @dummyjson": [
+    "p",
+    775
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 32. Product CRUD Workflow @api @e2e @products": [
+    "p",
+    961
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 33. User CRUD Workflow @api @e2e @users": [
+    "p",
+    1386
+   ],
+   "chromium::tests/api/e2e-workflows.spec.ts::E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts": [
+    "p",
+    1107
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 3. Get All Products @api @products": [
+    "p",
+    776
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 4. Get Product by ID @api @products": [
+    "p",
+    529
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 5. Get Products with Limit @api @products": [
+    "p",
+    677
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 6. Sort Products Ascending @api @products": [
+    "p",
+    690
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 7. Sort Products Descending @api @products": [
+    "p",
+    562
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 8. Get All Product Categories @api @products": [
+    "p",
+    747
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 9. Get Products by Category @api @products": [
+    "p",
+    521
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 10. Product CRUD - Create @api @products @crud": [
+    "p",
+    540
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 11. Product CRUD - Update @api @products @crud": [
+    "p",
+    491
+   ],
+   "chromium::tests/api/products.spec.ts::Products API › 12. Product CRUD - Delete @api @products @crud": [
+    "p",
+    624
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 1. Successful Authentication @api @booker": [
+    "p",
+    846
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 2. Invalid Authentication @api @booker": [
+    "p",
+    689
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 3. Get All Bookings @api @booker": [
+    "p",
+    4993
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 4. Get Booking by ID @api @booker": [
+    "p",
+    950
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker": [
+    "p",
+    932
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker": [
+    "p",
+    923
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 7. Booking CRUD - Create @api @booker": [
+    "p",
+    809
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 8. Booking CRUD - Update @api @booker": [
+    "p",
+    1241
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker": [
+    "p",
+    1165
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker": [
+    "p",
+    1160
+   ],
+   "chromium::tests/api/restful-booker.spec.ts::Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e": [
+    "p",
+    1674
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 29. Product Response Schema @api @schema": [
+    "p",
+    718
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 30. User Response Schema @api @schema": [
+    "p",
+    856
+   ],
+   "chromium::tests/api/schema-validation.spec.ts::JSON Schema Validation › 31. Cart Response Schema @api @schema": [
+    "p",
+    608
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 13. Get All Users @api @users": [
+    "p",
+    653
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 14. Get User by ID @api @users": [
+    "p",
+    587
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 15. Get Users with Limit @api @users": [
+    "p",
+    583
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 16. Sort Users @api @users": [
+    "p",
+    1076
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 17. User CRUD - Create @api @users @crud": [
+    "p",
+    672
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 18. User CRUD - Update @api @users @crud": [
+    "p",
+    520
+   ],
+   "chromium::tests/api/users.spec.ts::Users API › 19. User CRUD - Delete @api @users @crud": [
+    "p",
+    776
+   ]
+  }
  }
 ]
