@@ -1,6 +1,6 @@
 export const Routes = {
 
-    BASE_URL: process.env.API_BASE_URL || 'https://dummyjson.com',
+    BASE_URL: process.env.DUMMY_JSON_API_BASE_URL || 'https://dummyjson.com',
 
     // =========================
     // Common / Utility Routes
