@@ -1,220 +1,346 @@
-<testsuites id="" name="" tests="123" failures="0" skipped="0" errors="0" time="43.906804999999935">
-<testsuite name="api/auth.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.868" errors="0">
-<testcase name="Authentication › 1. Successful Login @api @auth" classname="api/auth.spec.ts" time="0.953">
+<testsuites id="" name="" tests="123" failures="0" skipped="0" errors="4" time="147.996093">
+<testsuite name="api/auth.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.585" errors="0">
+<testcase name="Authentication › 1. Successful Login @api @auth" classname="api/auth.spec.ts" time="0.76">
 </testcase>
-<testcase name="Authentication › 2. Invalid Login @api @auth" classname="api/auth.spec.ts" time="0.915">
-</testcase>
-</testsuite>
-<testsuite name="api/carts.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="9" failures="0" skipped="0" time="6.829" errors="0">
-<testcase name="Carts API › 20. Get All Carts @api @carts" classname="api/carts.spec.ts" time="1.01">
-</testcase>
-<testcase name="Carts API › 21. Get Cart by ID @api @carts" classname="api/carts.spec.ts" time="0.918">
-</testcase>
-<testcase name="Carts API › 22. Get Carts by Date Range @api @carts" classname="api/carts.spec.ts" time="0.622">
-</testcase>
-<testcase name="Carts API › 23. Get User Cart @api @carts" classname="api/carts.spec.ts" time="0.624">
-</testcase>
-<testcase name="Carts API › 24. Get Carts with Limit @api @carts" classname="api/carts.spec.ts" time="0.61">
-</testcase>
-<testcase name="Carts API › 25. Sort Carts @api @carts" classname="api/carts.spec.ts" time="0.949">
-</testcase>
-<testcase name="Carts API › 26. Cart CRUD - Create @api @carts @crud" classname="api/carts.spec.ts" time="0.698">
-</testcase>
-<testcase name="Carts API › 27. Cart CRUD - Update @api @carts @crud" classname="api/carts.spec.ts" time="0.518">
-</testcase>
-<testcase name="Carts API › 28. Cart CRUD - Delete @api @carts @crud" classname="api/carts.spec.ts" time="0.88">
+<testcase name="Authentication › 2. Invalid Login @api @auth" classname="api/auth.spec.ts" time="0.825">
 </testcase>
 </testsuite>
-<testsuite name="api/dummyjson.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="78" failures="0" skipped="0" time="52.67" errors="0">
-<testcase name="Authentication › 1. Successful Login @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.683">
-</testcase>
-<testcase name="Authentication › 2. Invalid Login @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.707">
-</testcase>
-<testcase name="Authentication › 3. Get Authenticated User (Me) @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.844">
-</testcase>
-<testcase name="Authentication › 4. Refresh Token @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.993">
-</testcase>
-<testcase name="Products API › 5. Get All Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.956">
-</testcase>
-<testcase name="Products API › 6. Get Product by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.492">
-</testcase>
-<testcase name="Products API › 7. Search Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.511">
-</testcase>
-<testcase name="Products API › 8. Sort Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.867">
-</testcase>
-<testcase name="Products API › 9. Get All Product Categories @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.491">
-</testcase>
-<testcase name="Products API › 10. Get Category List @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.514">
-</testcase>
-<testcase name="Products API › 11. Get Products by Category @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.515">
-</testcase>
-<testcase name="Products API › 12. Product CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.507">
-</testcase>
-<testcase name="Products API › 13. Product CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.603">
-</testcase>
-<testcase name="Products API › 14. Product CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.526">
-</testcase>
-<testcase name="Carts API › 15. Get All Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.582">
-</testcase>
-<testcase name="Carts API › 16. Get Cart by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.534">
-</testcase>
-<testcase name="Carts API › 17. Get Carts by User @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.589">
-</testcase>
-<testcase name="Carts API › 18. Sort Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.939">
-</testcase>
-<testcase name="Carts API › 19. Cart CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.545">
-</testcase>
-<testcase name="Carts API › 20. Cart CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.594">
-</testcase>
-<testcase name="Carts API › 21. Cart CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.535">
-</testcase>
-<testcase name="Recipes API › 22. Get All Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.106">
-</testcase>
-<testcase name="Recipes API › 23. Get Recipe by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.589">
-</testcase>
-<testcase name="Recipes API › 24. Search Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.575">
-</testcase>
-<testcase name="Recipes API › 25. Sort Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.237">
-</testcase>
-<testcase name="Recipes API › 26. Get All Recipe Tags @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.54">
-</testcase>
-<testcase name="Recipes API › 27. Get Recipes by Tag @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.648">
-</testcase>
-<testcase name="Recipes API › 28. Get Recipes by Meal Type @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.76">
-</testcase>
-<testcase name="Recipes API › 29. Recipe CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.754">
-</testcase>
-<testcase name="Recipes API › 30. Recipe CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.624">
-</testcase>
-<testcase name="Recipes API › 31. Recipe CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.758">
-</testcase>
-<testcase name="Users API › 32. Get All Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.474">
-</testcase>
-<testcase name="Users API › 33. Get User by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.715">
-</testcase>
-<testcase name="Users API › 34. Search Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.508">
-</testcase>
-<testcase name="Users API › 35. Filter Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.744">
-</testcase>
-<testcase name="Users API › 36. Sort Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.992">
-</testcase>
-<testcase name="Users API › 37. Get User Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.549">
-</testcase>
-<testcase name="Users API › 38. Get User Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.506">
-</testcase>
-<testcase name="Users API › 39. Get User Todos @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.673">
-</testcase>
-<testcase name="Users API › 40. User CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.595">
-</testcase>
-<testcase name="Users API › 41. User CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.686">
-</testcase>
-<testcase name="Users API › 42. User CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.476">
-</testcase>
-<testcase name="Posts API › 43. Get All Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.771">
-</testcase>
-<testcase name="Posts API › 44. Get Post by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.489">
-</testcase>
-<testcase name="Posts API › 45. Search Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.665">
-</testcase>
-<testcase name="Posts API › 46. Sort Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.015">
-</testcase>
-<testcase name="Posts API › 47. Get All Post Tags @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.468">
-</testcase>
-<testcase name="Posts API › 48. Get Post Tag List @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.54">
-</testcase>
-<testcase name="Posts API › 49. Get Posts by Tag @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.786">
-</testcase>
-<testcase name="Posts API › 50. Get Posts by User ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.584">
-</testcase>
-<testcase name="Posts API › 51. Get Post Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.5">
-</testcase>
-<testcase name="Posts API › 52. Post CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.517">
-</testcase>
-<testcase name="Posts API › 53. Post CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.485">
-</testcase>
-<testcase name="Posts API › 54. Post CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.508">
-</testcase>
-<testcase name="Comments API › 55. Get All Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.262">
-</testcase>
-<testcase name="Comments API › 56. Get Comment by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.53">
-</testcase>
-<testcase name="Comments API › 57. Sort Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.896">
-</testcase>
-<testcase name="Comments API › 58. Get Comments by Post ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.579">
-</testcase>
-<testcase name="Comments API › 59. Comment CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.515">
-</testcase>
-<testcase name="Comments API › 60. Comment CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.559">
-</testcase>
-<testcase name="Comments API › 61. Comment CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.473">
-</testcase>
-<testcase name="Todos API › 62. Get All Todos @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.937">
-</testcase>
-<testcase name="Todos API › 63. Get Todo by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.837">
-</testcase>
-<testcase name="Todos API › 64. Get Random Todo @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.573">
-</testcase>
-<testcase name="Todos API › 65. Get Todos by User ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.604">
-</testcase>
-<testcase name="Todos API › 66. Todo CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.498">
-</testcase>
-<testcase name="Todos API › 67. Todo CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.502">
-</testcase>
-<testcase name="Todos API › 68. Todo CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.586">
-</testcase>
-<testcase name="Quotes API › 69. Get All Quotes @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.619">
-</testcase>
-<testcase name="Quotes API › 70. Get Quote by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.695">
-</testcase>
-<testcase name="Quotes API › 71. Get Random Quote @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.473">
-</testcase>
-<testcase name="E2E Workflows › 72. Product CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.714">
-</testcase>
-<testcase name="E2E Workflows › 73. User CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.712">
-</testcase>
-<testcase name="E2E Workflows › 74. Cart CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.809">
-</testcase>
-<testcase name="E2E Workflows › 75. Recipe CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.626">
-</testcase>
-<testcase name="E2E Workflows › 76. Post CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.709">
-</testcase>
-<testcase name="E2E Workflows › 77. Comment CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.823">
-</testcase>
-<testcase name="E2E Workflows › 78. Todo CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.775">
+<testsuite name="api/carts.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="9" failures="0" skipped="0" time="65.068" errors="1">
+<testcase name="Carts API › 20. Get All Carts @api @carts" classname="api/carts.spec.ts" time="0.679">
+</testcase>
+<testcase name="Carts API › 21. Get Cart by ID @api @carts" classname="api/carts.spec.ts" time="0.839">
+</testcase>
+<testcase name="Carts API › 22. Get Carts by Date Range @api @carts" classname="api/carts.spec.ts" time="0.613">
+</testcase>
+<testcase name="Carts API › 23. Get User Cart @api @carts" classname="api/carts.spec.ts" time="0.639">
+</testcase>
+<testcase name="Carts API › 24. Get Carts with Limit @api @carts" classname="api/carts.spec.ts" time="0.605">
+</testcase>
+<testcase name="Carts API › 25. Sort Carts @api @carts" classname="api/carts.spec.ts" time="60.025">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-carts-Carts-API-25-Sort-Carts-api-carts-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › api/carts.spec.ts:71:9 › Carts API › 25. Sort Carts @api @carts ─────────────────────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: apiRequestContext.fetch: Request context disposed.
+    Call log:
+      - → GET https://fakestoreapi.com/carts?sort=asc
+        - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      71 |     test("25. Sort Carts @api @carts", async ({ request }) => {
+      72 |         const ascUrl = buildUrl(Routes.GET_CARTS_SORTED, { order: "asc" });
+    > 73 |         const ascResp = await request.get(ascUrl);
+         |                                       ^
+      74 |         await expectStatus(ascResp, 200);
+      75 |         const ascBody = await ascResp.json();
+      76 |         expect(Array.isArray(ascBody)).toBe(true);
+        at APIRequestContext2.patchedFetch (/Users/sakshijindal/Documents/Playwright_OpenCart_AI/node_modules/reporting-labs/dist/auto.js:135:34)
+        at /Users/sakshijindal/Documents/Playwright_OpenCart_AI/tests/api/carts.spec.ts:73:39
+
+    Error Context: ../test-results/api-carts-Carts-API-25-Sort-Carts-api-carts-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Carts API › 26. Cart CRUD - Create @api @carts @crud" classname="api/carts.spec.ts" time="0.499">
+</testcase>
+<testcase name="Carts API › 27. Cart CRUD - Update @api @carts @crud" classname="api/carts.spec.ts" time="0.49">
+</testcase>
+<testcase name="Carts API › 28. Cart CRUD - Delete @api @carts @crud" classname="api/carts.spec.ts" time="0.679">
 </testcase>
 </testsuite>
-<testsuite name="api/e2e-workflows.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.454" errors="0">
-<testcase name="E2E Workflows › 32. Product CRUD Workflow @api @e2e @products" classname="api/e2e-workflows.spec.ts" time="0.961">
+<testsuite name="api/dummyjson.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="78" failures="0" skipped="0" time="293.088" errors="3">
+<testcase name="Authentication › 1. Successful Login @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.55">
 </testcase>
-<testcase name="E2E Workflows › 33. User CRUD Workflow @api @e2e @users" classname="api/e2e-workflows.spec.ts" time="1.386">
+<testcase name="Authentication › 2. Invalid Login @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.57">
 </testcase>
-<testcase name="E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts" classname="api/e2e-workflows.spec.ts" time="1.107">
+<testcase name="Authentication › 3. Get Authenticated User (Me) @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.902">
+</testcase>
+<testcase name="Authentication › 4. Refresh Token @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.704">
+</testcase>
+<testcase name="Products API › 5. Get All Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.619">
+</testcase>
+<testcase name="Products API › 6. Get Product by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.458">
+</testcase>
+<testcase name="Products API › 7. Search Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.478">
+</testcase>
+<testcase name="Products API › 8. Sort Products @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.801">
+</testcase>
+<testcase name="Products API › 9. Get All Product Categories @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.545">
+</testcase>
+<testcase name="Products API › 10. Get Category List @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.558">
+</testcase>
+<testcase name="Products API › 11. Get Products by Category @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.564">
+</testcase>
+<testcase name="Products API › 12. Product CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="3.943">
+</testcase>
+<testcase name="Products API › 13. Product CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.611">
+</testcase>
+<testcase name="Products API › 14. Product CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="60.034">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-dummyjson-Products-API-95b1d-CRUD---Delete-api-dummyjson-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › api/dummyjson.spec.ts:222:9 › Products API › 14. Product CRUD - Delete @api @dummyjson 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: apiRequestContext.fetch: Request context disposed.
+    Call log:
+      - → DELETE https://dummyjson.com/products/1
+        - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      222 |     test('14. Product CRUD - Delete @api @dummyjson', async ({ request }) => {
+      223 |         const deleteUrl = buildUrl(Routes.DELETE_PRODUCT, { id: dummyJsonData.sampleIds.productId });
+    > 224 |         const deleteResp = await request.delete(deleteUrl);
+          |                                                ^
+      225 |         await expectStatus(deleteResp, 200);
+      226 |
+      227 |         const body = await deleteResp.json();
+        at APIRequestContext2.patchedFetch (/Users/sakshijindal/Documents/Playwright_OpenCart_AI/node_modules/reporting-labs/dist/auto.js:135:34)
+        at /Users/sakshijindal/Documents/Playwright_OpenCart_AI/tests/api/dummyjson.spec.ts:224:48
+
+    Error Context: ../test-results/api-dummyjson-Products-API-95b1d-CRUD---Delete-api-dummyjson-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Carts API › 15. Get All Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.55">
+</testcase>
+<testcase name="Carts API › 16. Get Cart by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="17.546">
+</testcase>
+<testcase name="Carts API › 17. Get Carts by User @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.496">
+</testcase>
+<testcase name="Carts API › 18. Sort Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="60.056">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-dummyjson-Carts-API-18-Sort-Carts-api-dummyjson-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › api/dummyjson.spec.ts:276:9 › Carts API › 18. Sort Carts @api @dummyjson ────────────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: apiRequestContext.fetch: Request context disposed.
+    Call log:
+      - → GET https://dummyjson.com/carts?sortBy=id&order=asc
+        - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+
+
+      276 |     test('18. Sort Carts @api @dummyjson', async ({ request }) => {
+      277 |         const ascUrl = buildUrl(Routes.GET_CARTS_SORTED, { sortBy: 'id', order: 'asc' });
+    > 278 |         const ascResp = await request.get(ascUrl);
+          |                                       ^
+      279 |         await expectStatus(ascResp, 200);
+      280 |         const ascBody = await ascResp.json();
+      281 |         const ascIds = ascBody.carts.map((c: { id: number }) => c.id);
+        at APIRequestContext2.patchedFetch (/Users/sakshijindal/Documents/Playwright_OpenCart_AI/node_modules/reporting-labs/dist/auto.js:135:34)
+        at /Users/sakshijindal/Documents/Playwright_OpenCart_AI/tests/api/dummyjson.spec.ts:278:39
+
+    Error Context: ../test-results/api-dummyjson-Carts-API-18-Sort-Carts-api-dummyjson-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Carts API › 19. Cart CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.499">
+</testcase>
+<testcase name="Carts API › 20. Cart CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.49">
+</testcase>
+<testcase name="Carts API › 21. Cart CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="2.285">
+</testcase>
+<testcase name="Recipes API › 22. Get All Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.169">
+</testcase>
+<testcase name="Recipes API › 23. Get Recipe by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.721">
+</testcase>
+<testcase name="Recipes API › 24. Search Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="11.582">
+</testcase>
+<testcase name="Recipes API › 25. Sort Recipes @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.804">
+</testcase>
+<testcase name="Recipes API › 26. Get All Recipe Tags @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.966">
+</testcase>
+<testcase name="Recipes API › 27. Get Recipes by Tag @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.486">
+</testcase>
+<testcase name="Recipes API › 28. Get Recipes by Meal Type @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.311">
+</testcase>
+<testcase name="Recipes API › 29. Recipe CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="3.468">
+</testcase>
+<testcase name="Recipes API › 30. Recipe CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.506">
+</testcase>
+<testcase name="Recipes API › 31. Recipe CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="2.258">
+</testcase>
+<testcase name="Users API › 32. Get All Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.462">
+</testcase>
+<testcase name="Users API › 33. Get User by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.68">
+</testcase>
+<testcase name="Users API › 34. Search Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.524">
+</testcase>
+<testcase name="Users API › 35. Filter Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.677">
+</testcase>
+<testcase name="Users API › 36. Sort Users @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.79">
+</testcase>
+<testcase name="Users API › 37. Get User Carts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.788">
+</testcase>
+<testcase name="Users API › 38. Get User Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.458">
+</testcase>
+<testcase name="Users API › 39. Get User Todos @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.73">
+</testcase>
+<testcase name="Users API › 40. User CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.837">
+</testcase>
+<testcase name="Users API › 41. User CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.527">
+</testcase>
+<testcase name="Users API › 42. User CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="4.759">
+</testcase>
+<testcase name="Posts API › 43. Get All Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.229">
+</testcase>
+<testcase name="Posts API › 44. Get Post by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="6.815">
+</testcase>
+<testcase name="Posts API › 45. Search Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.5">
+</testcase>
+<testcase name="Posts API › 46. Sort Posts @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.098">
+</testcase>
+<testcase name="Posts API › 47. Get All Post Tags @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.755">
+</testcase>
+<testcase name="Posts API › 48. Get Post Tag List @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.483">
+</testcase>
+<testcase name="Posts API › 49. Get Posts by Tag @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.488">
+</testcase>
+<testcase name="Posts API › 50. Get Posts by User ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="2.152">
+</testcase>
+<testcase name="Posts API › 51. Get Post Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="2.295">
+</testcase>
+<testcase name="Posts API › 52. Post CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.371">
+</testcase>
+<testcase name="Posts API › 53. Post CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.743">
+</testcase>
+<testcase name="Posts API › 54. Post CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.519">
+</testcase>
+<testcase name="Comments API › 55. Get All Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.201">
+</testcase>
+<testcase name="Comments API › 56. Get Comment by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.642">
+</testcase>
+<testcase name="Comments API › 57. Sort Comments @api @dummyjson" classname="api/dummyjson.spec.ts" time="4.261">
+</testcase>
+<testcase name="Comments API › 58. Get Comments by Post ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.584">
+</testcase>
+<testcase name="Comments API › 59. Comment CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.574">
+</testcase>
+<testcase name="Comments API › 60. Comment CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.592">
+</testcase>
+<testcase name="Comments API › 61. Comment CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.562">
+</testcase>
+<testcase name="Todos API › 62. Get All Todos @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.325">
+</testcase>
+<testcase name="Todos API › 63. Get Todo by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.787">
+</testcase>
+<testcase name="Todos API › 64. Get Random Todo @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.782">
+</testcase>
+<testcase name="Todos API › 65. Get Todos by User ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.72">
+</testcase>
+<testcase name="Todos API › 66. Todo CRUD - Create @api @dummyjson" classname="api/dummyjson.spec.ts" time="2.028">
+</testcase>
+<testcase name="Todos API › 67. Todo CRUD - Update @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.684">
+</testcase>
+<testcase name="Todos API › 68. Todo CRUD - Delete @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.54">
+</testcase>
+<testcase name="Quotes API › 69. Get All Quotes @api @dummyjson" classname="api/dummyjson.spec.ts" time="1.024">
+</testcase>
+<testcase name="Quotes API › 70. Get Quote by ID @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.588">
+</testcase>
+<testcase name="Quotes API › 71. Get Random Quote @api @dummyjson" classname="api/dummyjson.spec.ts" time="0.501">
+</testcase>
+<testcase name="E2E Workflows › 72. Product CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="1.058">
+</testcase>
+<testcase name="E2E Workflows › 73. User CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.896">
+</testcase>
+<testcase name="E2E Workflows › 74. Cart CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="1.629">
+</testcase>
+<testcase name="E2E Workflows › 75. Recipe CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="2.572">
+</testcase>
+<testcase name="E2E Workflows › 76. Post CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="0.858">
+</testcase>
+<testcase name="E2E Workflows › 77. Comment CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="1.432">
+</testcase>
+<testcase name="E2E Workflows › 78. Todo CRUD Workflow @api @e2e @dummyjson" classname="api/dummyjson.spec.ts" time="60.038">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/api-dummyjson-E2E-Workflow-0e333--Workflow-api-e2e-dummyjson-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › api/dummyjson.spec.ts:1077:9 › E2E Workflows › 78. Todo CRUD Workflow @api @e2e @dummyjson 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: apiRequestContext.fetch: Request context disposed.
+    Call log:
+      - → PUT https://dummyjson.com/todos/1
+        - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36
+        - accept: */*
+        - accept-encoding: gzip,deflate,br
+        - content-type: application/json
+        - content-length: 112
+
+
+      1079 |         const updateData = RandomDataUtil.generateUpdatedDummyJsonTodoPayload(1);
+      1080 |         const updateUrl = buildUrl(Routes.UPDATE_TODO, { id: todoId });
+    > 1081 |         const updateResp = await request.put(updateUrl, { data: updateData });
+           |                                          ^
+      1082 |         await expectStatus(updateResp, 200);
+      1083 |
+      1084 |         const deleteUrl = buildUrl(Routes.DELETE_TODO, { id: todoId });
+        at APIRequestContext2.patchedFetch (/Users/sakshijindal/Documents/Playwright_OpenCart_AI/node_modules/reporting-labs/dist/auto.js:135:34)
+        at /Users/sakshijindal/Documents/Playwright_OpenCart_AI/tests/api/dummyjson.spec.ts:1081:42
+
+    Error Context: ../test-results/api-dummyjson-E2E-Workflow-0e333--Workflow-api-e2e-dummyjson-chromium/error-context.md
+]]>
+</error>
 </testcase>
 </testsuite>
-<testsuite name="api/products.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="10" failures="0" skipped="0" time="6.157" errors="0">
-<testcase name="Products API › 3. Get All Products @api @products" classname="api/products.spec.ts" time="0.776">
+<testsuite name="api/e2e-workflows.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.338" errors="0">
+<testcase name="E2E Workflows › 32. Product CRUD Workflow @api @e2e @products" classname="api/e2e-workflows.spec.ts" time="1.165">
 </testcase>
-<testcase name="Products API › 4. Get Product by ID @api @products" classname="api/products.spec.ts" time="0.529">
+<testcase name="E2E Workflows › 33. User CRUD Workflow @api @e2e @users" classname="api/e2e-workflows.spec.ts" time="1.169">
 </testcase>
-<testcase name="Products API › 5. Get Products with Limit @api @products" classname="api/products.spec.ts" time="0.677">
-</testcase>
-<testcase name="Products API › 6. Sort Products Ascending @api @products" classname="api/products.spec.ts" time="0.69">
-</testcase>
-<testcase name="Products API › 7. Sort Products Descending @api @products" classname="api/products.spec.ts" time="0.562">
-</testcase>
-<testcase name="Products API › 8. Get All Product Categories @api @products" classname="api/products.spec.ts" time="0.747">
-</testcase>
-<testcase name="Products API › 9. Get Products by Category @api @products" classname="api/products.spec.ts" time="0.521">
-</testcase>
-<testcase name="Products API › 10. Product CRUD - Create @api @products @crud" classname="api/products.spec.ts" time="0.54">
-</testcase>
-<testcase name="Products API › 11. Product CRUD - Update @api @products @crud" classname="api/products.spec.ts" time="0.491">
-</testcase>
-<testcase name="Products API › 12. Product CRUD - Delete @api @products @crud" classname="api/products.spec.ts" time="0.624">
+<testcase name="E2E Workflows › 34. Cart CRUD Workflow @api @e2e @carts" classname="api/e2e-workflows.spec.ts" time="1.004">
 </testcase>
 </testsuite>
-<testsuite name="api/restful-booker.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="11" failures="0" skipped="0" time="15.382" errors="0">
-<testcase name="Restful Booker API Tests › 1. Successful Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.846">
+<testsuite name="api/products.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="10" failures="0" skipped="0" time="27.457" errors="0">
+<testcase name="Products API › 3. Get All Products @api @products" classname="api/products.spec.ts" time="1.048">
+</testcase>
+<testcase name="Products API › 4. Get Product by ID @api @products" classname="api/products.spec.ts" time="0.616">
+</testcase>
+<testcase name="Products API › 5. Get Products with Limit @api @products" classname="api/products.spec.ts" time="0.674">
+</testcase>
+<testcase name="Products API › 6. Sort Products Ascending @api @products" classname="api/products.spec.ts" time="3.874">
+</testcase>
+<testcase name="Products API › 7. Sort Products Descending @api @products" classname="api/products.spec.ts" time="0.617">
+</testcase>
+<testcase name="Products API › 8. Get All Product Categories @api @products" classname="api/products.spec.ts" time="0.678">
+</testcase>
+<testcase name="Products API › 9. Get Products by Category @api @products" classname="api/products.spec.ts" time="9.752">
+</testcase>
+<testcase name="Products API › 10. Product CRUD - Create @api @products @crud" classname="api/products.spec.ts" time="0.613">
+</testcase>
+<testcase name="Products API › 11. Product CRUD - Update @api @products @crud" classname="api/products.spec.ts" time="0.55">
+</testcase>
+<testcase name="Products API › 12. Product CRUD - Delete @api @products @crud" classname="api/products.spec.ts" time="9.035">
+</testcase>
+</testsuite>
+<testsuite name="api/restful-booker.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="11" failures="0" skipped="0" time="28.537" errors="0">
+<testcase name="Restful Booker API Tests › 1. Successful Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.874">
 <properties>
 <property name="priority" value="P1">
 </property>
@@ -228,49 +354,49 @@
 </property>
 </properties>
 </testcase>
-<testcase name="Restful Booker API Tests › 2. Invalid Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.689">
+<testcase name="Restful Booker API Tests › 2. Invalid Authentication @api @booker" classname="api/restful-booker.spec.ts" time="0.803">
 </testcase>
-<testcase name="Restful Booker API Tests › 3. Get All Bookings @api @booker" classname="api/restful-booker.spec.ts" time="4.993">
+<testcase name="Restful Booker API Tests › 3. Get All Bookings @api @booker" classname="api/restful-booker.spec.ts" time="17.361">
 </testcase>
-<testcase name="Restful Booker API Tests › 4. Get Booking by ID @api @booker" classname="api/restful-booker.spec.ts" time="0.95">
+<testcase name="Restful Booker API Tests › 4. Get Booking by ID @api @booker" classname="api/restful-booker.spec.ts" time="1.118">
 </testcase>
-<testcase name="Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker" classname="api/restful-booker.spec.ts" time="0.932">
+<testcase name="Restful Booker API Tests › 5. Get Booking IDs by Name @api @booker" classname="api/restful-booker.spec.ts" time="1.026">
 </testcase>
-<testcase name="Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker" classname="api/restful-booker.spec.ts" time="0.923">
+<testcase name="Restful Booker API Tests › 6. Get Booking IDs by Date Range @api @booker" classname="api/restful-booker.spec.ts" time="1.084">
 </testcase>
-<testcase name="Restful Booker API Tests › 7. Booking CRUD - Create @api @booker" classname="api/restful-booker.spec.ts" time="0.809">
+<testcase name="Restful Booker API Tests › 7. Booking CRUD - Create @api @booker" classname="api/restful-booker.spec.ts" time="0.728">
 </testcase>
-<testcase name="Restful Booker API Tests › 8. Booking CRUD - Update @api @booker" classname="api/restful-booker.spec.ts" time="1.241">
+<testcase name="Restful Booker API Tests › 8. Booking CRUD - Update @api @booker" classname="api/restful-booker.spec.ts" time="1.177">
 </testcase>
-<testcase name="Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker" classname="api/restful-booker.spec.ts" time="1.165">
+<testcase name="Restful Booker API Tests › 9. Booking CRUD - Partial Update @api @booker" classname="api/restful-booker.spec.ts" time="1.179">
 </testcase>
-<testcase name="Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker" classname="api/restful-booker.spec.ts" time="1.16">
+<testcase name="Restful Booker API Tests › 10. Booking CRUD - Delete @api @booker" classname="api/restful-booker.spec.ts" time="1.339">
 </testcase>
-<testcase name="Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e" classname="api/restful-booker.spec.ts" time="1.674">
-</testcase>
-</testsuite>
-<testsuite name="api/schema-validation.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="3" failures="0" skipped="0" time="2.182" errors="0">
-<testcase name="JSON Schema Validation › 29. Product Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.718">
-</testcase>
-<testcase name="JSON Schema Validation › 30. User Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.856">
-</testcase>
-<testcase name="JSON Schema Validation › 31. Cart Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.608">
+<testcase name="Restful Booker API Tests › 11. Booking CRUD Workflow @api @booker @e2e" classname="api/restful-booker.spec.ts" time="1.848">
 </testcase>
 </testsuite>
-<testsuite name="api/users.spec.ts" timestamp="2026-10-17T19:53:01.692Z" hostname="chromium" tests="7" failures="0" skipped="0" time="4.867" errors="0">
-<testcase name="Users API › 13. Get All Users @api @users" classname="api/users.spec.ts" time="0.653">
+<testsuite name="api/schema-validation.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="3" failures="0" skipped="0" time="11.519" errors="0">
+<testcase name="JSON Schema Validation › 29. Product Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.845">
 </testcase>
-<testcase name="Users API › 14. Get User by ID @api @users" classname="api/users.spec.ts" time="0.587">
+<testcase name="JSON Schema Validation › 30. User Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="9.902">
 </testcase>
-<testcase name="Users API › 15. Get Users with Limit @api @users" classname="api/users.spec.ts" time="0.583">
+<testcase name="JSON Schema Validation › 31. Cart Response Schema @api @schema" classname="api/schema-validation.spec.ts" time="0.772">
 </testcase>
-<testcase name="Users API › 16. Sort Users @api @users" classname="api/users.spec.ts" time="1.076">
+</testsuite>
+<testsuite name="api/users.spec.ts" timestamp="2026-10-18T06:16:48.964Z" hostname="chromium" tests="7" failures="0" skipped="0" time="8.457" errors="0">
+<testcase name="Users API › 13. Get All Users @api @users" classname="api/users.spec.ts" time="4.028">
 </testcase>
-<testcase name="Users API › 17. User CRUD - Create @api @users @crud" classname="api/users.spec.ts" time="0.672">
+<testcase name="Users API › 14. Get User by ID @api @users" classname="api/users.spec.ts" time="0.656">
 </testcase>
-<testcase name="Users API › 18. User CRUD - Update @api @users @crud" classname="api/users.spec.ts" time="0.52">
+<testcase name="Users API › 15. Get Users with Limit @api @users" classname="api/users.spec.ts" time="0.654">
 </testcase>
-<testcase name="Users API › 19. User CRUD - Delete @api @users @crud" classname="api/users.spec.ts" time="0.776">
+<testcase name="Users API › 16. Sort Users @api @users" classname="api/users.spec.ts" time="1.101">
+</testcase>
+<testcase name="Users API › 17. User CRUD - Create @api @users @crud" classname="api/users.spec.ts" time="0.699">
+</testcase>
+<testcase name="Users API › 18. User CRUD - Update @api @users @crud" classname="api/users.spec.ts" time="0.689">
+</testcase>
+<testcase name="Users API › 19. User CRUD - Delete @api @users @crud" classname="api/users.spec.ts" time="0.63">
 </testcase>
 </testsuite>
 </testsuites>

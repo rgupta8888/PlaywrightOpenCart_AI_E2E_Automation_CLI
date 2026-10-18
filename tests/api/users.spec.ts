@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
 import { expectStatus } from "../../utils/apiHelpers";
+import { fakeStoreData } from "../../testdata/api/apiTestData";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -14,8 +15,8 @@ function buildUrl(template: string, params?: Record<string, string | number>): s
 }
 
 test.describe("Users API", () => {
-    const sampleUserId = 1;
-    const userLimit = 2;
+    const sampleUserId = fakeStoreData.sampleIds.userId;
+    const userLimit = fakeStoreData.sampleIds.limit;
 
     test("13. Get All Users @api @users", async ({ request }) => {
         const url = buildUrl(Routes.GET_ALL_USERS);

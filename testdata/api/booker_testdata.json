@@ -1,0 +1,19 @@
+{
+  "credentials": {
+    "valid": {
+      "username": "admin",
+      "password": "password123"
+    }
+  },
+  "sampleIds": {
+    "bookingId": 1
+  },
+  "names": {
+    "firstName": "Sally",
+    "lastName": "Ericsson"
+  },
+  "dateRange": {
+    "checkin": "2024-04-15",
+    "checkout": "2025-12-12"
+  }
+}

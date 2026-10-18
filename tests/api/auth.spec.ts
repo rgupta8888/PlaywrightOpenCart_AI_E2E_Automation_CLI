@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
 import { expectStatus } from "../../utils/apiHelpers";
+import { fakeStoreData } from "../../testdata/api/apiTestData";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -18,8 +19,8 @@ test.describe("Authentication", () => {
         const url = buildUrl(Routes.AUTH_LOGIN);
         const resp = await request.post(url, {
             data: {
-                username: "mor_2314",
-                password: "83r5^_",
+                username: fakeStoreData.credentials.valid.username,
+                password: fakeStoreData.credentials.valid.password,
             },
         });
         await expectStatus(resp, 201);

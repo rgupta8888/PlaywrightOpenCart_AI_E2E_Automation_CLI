@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
 import { expectStatus } from "../../utils/apiHelpers";
+import { fakeStoreData } from "../../testdata/api/apiTestData";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -14,8 +15,8 @@ function buildUrl(template: string, params?: Record<string, string | number>): s
 }
 
 test.describe("Products API", () => {
-    const sampleProductId = 1;
-    const productLimit = 3;
+    const sampleProductId = fakeStoreData.sampleIds.productId;
+    const productLimit = fakeStoreData.sampleIds.limit;
 
     test("3. Get All Products @api @products", async ({ request }) => {
         const url = buildUrl(Routes.GET_ALL_PRODUCTS);
@@ -101,7 +102,7 @@ test.describe("Products API", () => {
     });
 
     test("9. Get Products by Category @api @products", async ({ request }) => {
-        const category = "electronics";
+        const category = fakeStoreData.categories.validCategory;
         const url = buildUrl(Routes.GET_PRODUCTS_BY_CATEGORY, { category });
         const resp = await request.get(url);
         await expectStatus(resp, 200);

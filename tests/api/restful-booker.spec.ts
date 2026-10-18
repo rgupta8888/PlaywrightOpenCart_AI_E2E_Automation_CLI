@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { bookerRoutes } from '../../api/endpoints/bookerRoutes';
 import { RandomDataUtil } from '../../utils/dataGenerator';
 import { meta , log } from 'reporting-labs';
+import { bookerData } from '../../testdata/api/apiTestData';
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${bookerRoutes.BASE_URL}${template}`;
@@ -14,9 +15,13 @@ function buildUrl(template: string, params?: Record<string, string | number>): s
 }
 
 async function getAuthToken(request: any): Promise<string> {
-    const payload = RandomDataUtil.generateRestfulBookerAuthPayload();
     const url = buildUrl(bookerRoutes.CREATE_TOKEN);
-    const resp = await request.post(url, { data: payload });
+    const resp = await request.post(url, {
+        data: {
+            username: bookerData.credentials.valid.username,
+            password: bookerData.credentials.valid.password,
+        },
+    });
     const body = await resp.json();
     return body.token;
 }

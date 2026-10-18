@@ -1,0 +1,34 @@
+{
+  "credentials": {
+    "valid": {
+      "username": "emilys",
+      "password": "emilyspass"
+    }
+  },
+  "sampleIds": {
+    "productId": 1,
+    "userId": 1,
+    "cartId": 1,
+    "recipeId": 1,
+    "postId": 1,
+    "commentId": 1,
+    "todoId": 1,
+    "quoteId": 1
+  },
+  "searchQueries": {
+    "product": "phone",
+    "user": "Emily",
+    "post": "history",
+    "recipe": "pasta"
+  },
+  "filters": {
+    "userKey": "hair.color",
+    "userValue": "Brown"
+  },
+  "categories": {
+    "productCategory": "beauty",
+    "recipeTag": "Italian",
+    "mealType": "Breakfast",
+    "postTag": "history"
+  }
+}

@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
 import { expectStatus } from "../../utils/apiHelpers";
+import { fakeStoreData } from "../../testdata/api/apiTestData";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -14,8 +15,8 @@ function buildUrl(template: string, params?: Record<string, string | number>): s
 }
 
 test.describe("Carts API", () => {
-    const sampleCartId = 1;
-    const cartLimit = 2;
+    const sampleCartId = fakeStoreData.sampleIds.cartId;
+    const cartLimit = fakeStoreData.sampleIds.limit;
 
     test("20. Get All Carts @api @carts", async ({ request }) => {
         const url = buildUrl(Routes.GET_ALL_CARTS);
@@ -41,8 +42,8 @@ test.describe("Carts API", () => {
 
     test("22. Get Carts by Date Range @api @carts", async ({ request }) => {
         const url = buildUrl(Routes.GET_CARTS_BY_DATE_RANGE, {
-            startdate: "2019-12-10",
-            enddate: "2020-10-10",
+            startdate: fakeStoreData.dateRange.startDate,
+            enddate: fakeStoreData.dateRange.endDate,
         });
         const resp = await request.get(url);
         await expectStatus(resp, 200);

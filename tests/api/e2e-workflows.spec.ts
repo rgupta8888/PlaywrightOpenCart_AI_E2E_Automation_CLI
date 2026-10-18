@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { Routes } from "../../api/endpoints/routes";
 import { RandomDataUtil } from "../../utils/dataGenerator";
 import { expectStatus } from "../../utils/apiHelpers";
+import { fakeStoreData } from "../../testdata/api/apiTestData";
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;

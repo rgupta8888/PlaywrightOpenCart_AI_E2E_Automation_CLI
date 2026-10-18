@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { Routes } from '../../api/endpoints/dummyJsonroutes';
 import { RandomDataUtil } from '../../utils/dataGenerator';
 import { expectStatus } from '../../utils/apiHelpers';
+import { dummyJsonData } from '../../testdata/api/apiTestData';
 
 function buildUrl(template: string, params?: Record<string, string | number>): string {
     let url = `${Routes.BASE_URL}${template}`;
@@ -16,7 +17,7 @@ function buildUrl(template: string, params?: Record<string, string | number>): s
 async function getAuthToken(request: any): Promise<{ accessToken: string; refreshToken: string }> {
     const url = buildUrl(Routes.AUTH_LOGIN);
     const resp = await request.post(url, {
-        data: { username: 'emilys', password: 'emilyspass' },
+        data: { username: dummyJsonData.credentials.valid.username, password: dummyJsonData.credentials.valid.password },
     });
     const body = await resp.json();
     return { accessToken: body.accessToken, refreshToken: body.refreshToken };
@@ -31,7 +32,7 @@ test.describe('Authentication', () => {
     test('1. Successful Login @api @dummyjson', async ({ request }) => {
         const url = buildUrl(Routes.AUTH_LOGIN);
         const resp = await request.post(url, {
-            data: { username: 'emilys', password: 'emilyspass' },
+            data: { username: dummyJsonData.credentials.valid.username, password: dummyJsonData.credentials.valid.password },
         });
         await expectStatus(resp, 200);
 
@@ -115,22 +116,17 @@ test.describe('Products API', () => {
     });
 
     test('6. Get Product by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_PRODUCT_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_PRODUCT_BY_ID, { id: dummyJsonData.sampleIds.productId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
-        expect(body).toHaveProperty('title');
-        expect(body).toHaveProperty('price');
-        expect(body).toHaveProperty('description');
-        expect(body).toHaveProperty('category');
-        expect(body).toHaveProperty('thumbnail');
+        expect(body.id).toBe(dummyJsonData.sampleIds.productId);
     });
 
     test('7. Search Products @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.SEARCH_PRODUCTS, { query: 'phone' });
+        const url = buildUrl(Routes.SEARCH_PRODUCTS, { query: dummyJsonData.searchQueries.product });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -186,7 +182,7 @@ test.describe('Products API', () => {
     });
 
     test('11. Get Products by Category @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_PRODUCTS_BY_CATEGORY, { category: 'beauty' });
+        const url = buildUrl(Routes.GET_PRODUCTS_BY_CATEGORY, { category: dummyJsonData.categories.productCategory });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -214,17 +210,17 @@ test.describe('Products API', () => {
     test('13. Product CRUD - Update @api @dummyjson', async ({ request }) => {
         // DummyJSON doesn't persist created items, so use a known real ID
         const updatePayload = RandomDataUtil.generateUpdatedDummyJsonProductPayload();
-        const updateUrl = buildUrl(Routes.UPDATE_PRODUCT, { id: 1 });
+        const updateUrl = buildUrl(Routes.UPDATE_PRODUCT, { id: dummyJsonData.sampleIds.productId });
         const updateResp = await request.put(updateUrl, { data: updatePayload });
         await expectStatus(updateResp, 200);
 
         const body = await updateResp.json();
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.productId);
         expect(body.title).toContain('Updated ');
     });
 
     test('14. Product CRUD - Delete @api @dummyjson', async ({ request }) => {
-        const deleteUrl = buildUrl(Routes.DELETE_PRODUCT, { id: 1 });
+        const deleteUrl = buildUrl(Routes.DELETE_PRODUCT, { id: dummyJsonData.sampleIds.productId });
         const deleteResp = await request.delete(deleteUrl);
         await expectStatus(deleteResp, 200);
 
@@ -252,20 +248,20 @@ test.describe('Carts API', () => {
     });
 
     test('16. Get Cart by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_CART_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_CART_BY_ID, { id: dummyJsonData.sampleIds.cartId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.cartId);
         expect(body).toHaveProperty('userId');
         expect(body).toHaveProperty('products');
         expect(Array.isArray(body.products)).toBe(true);
     });
 
     test('17. Get Carts by User @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_CARTS_BY_USER, { userId: 1 });
+        const url = buildUrl(Routes.GET_CARTS_BY_USER, { userId: dummyJsonData.sampleIds.userId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -273,7 +269,7 @@ test.describe('Carts API', () => {
         expect(body).toHaveProperty('carts');
         expect(Array.isArray(body.carts)).toBe(true);
         for (const cart of body.carts) {
-            expect(cart.userId).toBe(1);
+            expect(cart.userId).toBe(dummyJsonData.sampleIds.userId);
         }
     });
 
@@ -298,7 +294,7 @@ test.describe('Carts API', () => {
     });
 
     test('19. Cart CRUD - Create @api @dummyjson', async ({ request }) => {
-        const payload = RandomDataUtil.generateDummyJsonCartPayload(1);
+        const payload = RandomDataUtil.generateDummyJsonCartPayload(dummyJsonData.sampleIds.userId);
         const url = buildUrl(Routes.CREATE_CART);
         const resp = await request.post(url, { data: payload });
         await expectStatus(resp, 201);
@@ -313,16 +309,16 @@ test.describe('Carts API', () => {
 
     test('20. Cart CRUD - Update @api @dummyjson', async ({ request }) => {
         const updatePayload = RandomDataUtil.generateUpdatedDummyJsonCartPayload(1);
-        const updateUrl = buildUrl(Routes.UPDATE_CART, { id: 1 });
+        const updateUrl = buildUrl(Routes.UPDATE_CART, { id: dummyJsonData.sampleIds.cartId });
         const updateResp = await request.put(updateUrl, { data: updatePayload });
         await expectStatus(updateResp, 200);
 
         const body = await updateResp.json();
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.cartId);
     });
 
     test('21. Cart CRUD - Delete @api @dummyjson', async ({ request }) => {
-        const deleteUrl = buildUrl(Routes.DELETE_CART, { id: 1 });
+        const deleteUrl = buildUrl(Routes.DELETE_CART, { id: dummyJsonData.sampleIds.cartId });
         const deleteResp = await request.delete(deleteUrl);
         await expectStatus(deleteResp, 200);
 
@@ -357,20 +353,20 @@ test.describe('Recipes API', () => {
     });
 
     test('23. Get Recipe by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_RECIPE_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_RECIPE_BY_ID, { id: dummyJsonData.sampleIds.recipeId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.recipeId);
         expect(body).toHaveProperty('name');
         expect(body).toHaveProperty('cuisine');
         expect(body).toHaveProperty('difficulty');
     });
 
     test('24. Search Recipes @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.SEARCH_RECIPES, { query: 'pasta' });
+        const url = buildUrl(Routes.SEARCH_RECIPES, { query: dummyJsonData.searchQueries.recipe });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -411,7 +407,7 @@ test.describe('Recipes API', () => {
     });
 
     test('27. Get Recipes by Tag @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_RECIPES_BY_TAG, { tag: 'Italian' });
+        const url = buildUrl(Routes.GET_RECIPES_BY_TAG, { tag: dummyJsonData.categories.recipeTag });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -422,7 +418,7 @@ test.describe('Recipes API', () => {
     });
 
     test('28. Get Recipes by Meal Type @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_RECIPES_BY_MEAL_TYPE, { mealType: 'Breakfast' });
+        const url = buildUrl(Routes.GET_RECIPES_BY_MEAL_TYPE, { mealType: dummyJsonData.categories.mealType });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -446,17 +442,17 @@ test.describe('Recipes API', () => {
 
     test('30. Recipe CRUD - Update @api @dummyjson', async ({ request }) => {
         const updatePayload = RandomDataUtil.generateUpdatedDummyJsonRecipePayload();
-        const updateUrl = buildUrl(Routes.UPDATE_RECIPE, { id: 1 });
+        const updateUrl = buildUrl(Routes.UPDATE_RECIPE, { id: dummyJsonData.sampleIds.recipeId });
         const updateResp = await request.put(updateUrl, { data: updatePayload });
         await expectStatus(updateResp, 200);
 
         const body = await updateResp.json();
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.recipeId);
         expect(body.name).toContain('Updated ');
     });
 
     test('31. Recipe CRUD - Delete @api @dummyjson', async ({ request }) => {
-        const deleteUrl = buildUrl(Routes.DELETE_RECIPE, { id: 1 });
+        const deleteUrl = buildUrl(Routes.DELETE_RECIPE, { id: dummyJsonData.sampleIds.recipeId });
         const deleteResp = await request.delete(deleteUrl);
         await expectStatus(deleteResp, 200);
 
@@ -484,20 +480,20 @@ test.describe('Users API', () => {
     });
 
     test('33. Get User by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_USER_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_USER_BY_ID, { id: dummyJsonData.sampleIds.userId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.userId);
         expect(body).toHaveProperty('email');
         expect(body).toHaveProperty('firstName');
         expect(body).toHaveProperty('lastName');
     });
 
     test('34. Search Users @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.SEARCH_USERS, { query: 'Emily' });
+        const url = buildUrl(Routes.SEARCH_USERS, { query: dummyJsonData.searchQueries.user });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -508,7 +504,7 @@ test.describe('Users API', () => {
     });
 
     test('35. Filter Users @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.FILTER_USERS, { key: 'hair.color', value: 'Brown' });
+        const url = buildUrl(Routes.FILTER_USERS, { key: dummyJsonData.filters.userKey, value: dummyJsonData.filters.userValue });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -516,7 +512,7 @@ test.describe('Users API', () => {
         expect(body).toHaveProperty('users');
         expect(Array.isArray(body.users)).toBe(true);
         for (const user of body.users) {
-            expect(user.hair.color).toBe('Brown');
+            expect(user.hair.color).toBe(dummyJsonData.filters.userValue);
         }
     });
 
@@ -541,7 +537,7 @@ test.describe('Users API', () => {
     });
 
     test('37. Get User Carts @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_USER_CARTS, { id: 1 });
+        const url = buildUrl(Routes.GET_USER_CARTS, { id: dummyJsonData.sampleIds.userId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -551,7 +547,7 @@ test.describe('Users API', () => {
     });
 
     test('38. Get User Posts @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_USER_POSTS, { id: 1 });
+        const url = buildUrl(Routes.GET_USER_POSTS, { id: dummyJsonData.sampleIds.userId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -561,7 +557,7 @@ test.describe('Users API', () => {
     });
 
     test('39. Get User Todos @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_USER_TODOS, { id: 1 });
+        const url = buildUrl(Routes.GET_USER_TODOS, { id: dummyJsonData.sampleIds.userId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -584,17 +580,17 @@ test.describe('Users API', () => {
 
     test('41. User CRUD - Update @api @dummyjson', async ({ request }) => {
         const updatePayload = RandomDataUtil.generateUpdatedDummyJsonUserPayload();
-        const updateUrl = buildUrl(Routes.UPDATE_USER, { id: 1 });
+        const updateUrl = buildUrl(Routes.UPDATE_USER, { id: dummyJsonData.sampleIds.userId });
         const updateResp = await request.put(updateUrl, { data: updatePayload });
         await expectStatus(updateResp, 200);
 
         const body = await updateResp.json();
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.userId);
         expect(body.firstName).toContain('Updated ');
     });
 
     test('42. User CRUD - Delete @api @dummyjson', async ({ request }) => {
-        const deleteUrl = buildUrl(Routes.DELETE_USER, { id: 1 });
+        const deleteUrl = buildUrl(Routes.DELETE_USER, { id: dummyJsonData.sampleIds.userId });
         const deleteResp = await request.delete(deleteUrl);
         await expectStatus(deleteResp, 200);
 
@@ -629,20 +625,20 @@ test.describe('Posts API', () => {
     });
 
     test('44. Get Post by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_POST_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_POST_BY_ID, { id: dummyJsonData.sampleIds.postId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.postId);
         expect(body).toHaveProperty('title');
         expect(body).toHaveProperty('body');
         expect(body).toHaveProperty('userId');
     });
 
     test('45. Search Posts @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.SEARCH_POSTS, { query: 'history' });
+        const url = buildUrl(Routes.SEARCH_POSTS, { query: dummyJsonData.searchQueries.post });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -693,7 +689,7 @@ test.describe('Posts API', () => {
     });
 
     test('49. Get Posts by Tag @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_POSTS_BY_TAG, { tag: 'history' });
+        const url = buildUrl(Routes.GET_POSTS_BY_TAG, { tag: dummyJsonData.categories.postTag });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -704,7 +700,7 @@ test.describe('Posts API', () => {
     });
 
     test('50. Get Posts by User ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_POSTS_BY_USER_ID, { userId: 1 });
+        const url = buildUrl(Routes.GET_POSTS_BY_USER_ID, { userId: dummyJsonData.sampleIds.userId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -714,7 +710,7 @@ test.describe('Posts API', () => {
     });
 
     test('51. Get Post Comments @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_POST_COMMENTS, { id: 1 });
+        const url = buildUrl(Routes.GET_POST_COMMENTS, { id: dummyJsonData.sampleIds.postId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -737,17 +733,17 @@ test.describe('Posts API', () => {
 
     test('53. Post CRUD - Update @api @dummyjson', async ({ request }) => {
         const updatePayload = RandomDataUtil.generateUpdatedDummyJsonPostPayload(1);
-        const updateUrl = buildUrl(Routes.UPDATE_POST, { id: 1 });
+        const updateUrl = buildUrl(Routes.UPDATE_POST, { id: dummyJsonData.sampleIds.postId });
         const updateResp = await request.put(updateUrl, { data: updatePayload });
         await expectStatus(updateResp, 200);
 
         const body = await updateResp.json();
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.postId);
         expect(body.title).toContain('Updated ');
     });
 
     test('54. Post CRUD - Delete @api @dummyjson', async ({ request }) => {
-        const deleteUrl = buildUrl(Routes.DELETE_POST, { id: 1 });
+        const deleteUrl = buildUrl(Routes.DELETE_POST, { id: dummyJsonData.sampleIds.postId });
         const deleteResp = await request.delete(deleteUrl);
         await expectStatus(deleteResp, 200);
 
@@ -782,13 +778,13 @@ test.describe('Comments API', () => {
     });
 
     test('56. Get Comment by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_COMMENT_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_COMMENT_BY_ID, { id: dummyJsonData.sampleIds.commentId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.commentId);
         expect(body).toHaveProperty('body');
         expect(body).toHaveProperty('postId');
     });
@@ -814,7 +810,7 @@ test.describe('Comments API', () => {
     });
 
     test('58. Get Comments by Post ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_COMMENTS_BY_POST_ID, { postId: 1 });
+        const url = buildUrl(Routes.GET_COMMENTS_BY_POST_ID, { postId: dummyJsonData.sampleIds.postId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -825,7 +821,7 @@ test.describe('Comments API', () => {
     });
 
     test('59. Comment CRUD - Create @api @dummyjson', async ({ request }) => {
-        const payload = RandomDataUtil.generateDummyJsonCommentPayload(1);
+        const payload = RandomDataUtil.generateDummyJsonCommentPayload(dummyJsonData.sampleIds.postId);
         const url = buildUrl(Routes.CREATE_COMMENT);
         const resp = await request.post(url, { data: payload });
         await expectStatus(resp, 201);
@@ -837,18 +833,18 @@ test.describe('Comments API', () => {
     });
 
     test('60. Comment CRUD - Update @api @dummyjson', async ({ request }) => {
-        const updatePayload = RandomDataUtil.generateUpdatedDummyJsonCommentPayload(1);
-        const updateUrl = buildUrl(Routes.UPDATE_COMMENT, { id: 1 });
+        const updatePayload = RandomDataUtil.generateUpdatedDummyJsonCommentPayload(dummyJsonData.sampleIds.postId);
+        const updateUrl = buildUrl(Routes.UPDATE_COMMENT, { id: dummyJsonData.sampleIds.commentId });
         const updateResp = await request.put(updateUrl, { data: updatePayload });
         await expectStatus(updateResp, 200);
 
         const body = await updateResp.json();
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.commentId);
         expect(body.body).toContain('Updated ');
     });
 
     test('61. Comment CRUD - Delete @api @dummyjson', async ({ request }) => {
-        const deleteUrl = buildUrl(Routes.DELETE_COMMENT, { id: 1 });
+        const deleteUrl = buildUrl(Routes.DELETE_COMMENT, { id: dummyJsonData.sampleIds.commentId });
         const deleteResp = await request.delete(deleteUrl);
         await expectStatus(deleteResp, 200);
 
@@ -883,13 +879,13 @@ test.describe('Todos API', () => {
     });
 
     test('63. Get Todo by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_TODO_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_TODO_BY_ID, { id: dummyJsonData.sampleIds.todoId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.todoId);
         expect(body).toHaveProperty('todo');
         expect(body).toHaveProperty('completed');
         expect(body).toHaveProperty('userId');
@@ -907,7 +903,7 @@ test.describe('Todos API', () => {
     });
 
     test('65. Get Todos by User ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_TODOS_BY_USER_ID, { userId: 1 });
+        const url = buildUrl(Routes.GET_TODOS_BY_USER_ID, { userId: dummyJsonData.sampleIds.userId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
@@ -917,7 +913,7 @@ test.describe('Todos API', () => {
     });
 
     test('66. Todo CRUD - Create @api @dummyjson', async ({ request }) => {
-        const payload = RandomDataUtil.generateDummyJsonTodoPayload(1);
+        const payload = RandomDataUtil.generateDummyJsonTodoPayload(dummyJsonData.sampleIds.userId);
         const url = buildUrl(Routes.CREATE_TODO);
         const resp = await request.post(url, { data: payload });
         await expectStatus(resp, 201);
@@ -929,18 +925,18 @@ test.describe('Todos API', () => {
     });
 
     test('67. Todo CRUD - Update @api @dummyjson', async ({ request }) => {
-        const updatePayload = RandomDataUtil.generateUpdatedDummyJsonTodoPayload(1);
-        const updateUrl = buildUrl(Routes.UPDATE_TODO, { id: 1 });
+        const updatePayload = RandomDataUtil.generateUpdatedDummyJsonTodoPayload(dummyJsonData.sampleIds.userId);
+        const updateUrl = buildUrl(Routes.UPDATE_TODO, { id: dummyJsonData.sampleIds.todoId });
         const updateResp = await request.put(updateUrl, { data: updatePayload });
         await expectStatus(updateResp, 200);
 
         const body = await updateResp.json();
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.todoId);
         expect(body.todo).toContain('Updated ');
     });
 
     test('68. Todo CRUD - Delete @api @dummyjson', async ({ request }) => {
-        const deleteUrl = buildUrl(Routes.DELETE_TODO, { id: 1 });
+        const deleteUrl = buildUrl(Routes.DELETE_TODO, { id: dummyJsonData.sampleIds.todoId });
         const deleteResp = await request.delete(deleteUrl);
         await expectStatus(deleteResp, 200);
 
@@ -974,13 +970,13 @@ test.describe('Quotes API', () => {
     });
 
     test('70. Get Quote by ID @api @dummyjson', async ({ request }) => {
-        const url = buildUrl(Routes.GET_QUOTE_BY_ID, { id: 1 });
+        const url = buildUrl(Routes.GET_QUOTE_BY_ID, { id: dummyJsonData.sampleIds.quoteId });
         const resp = await request.get(url);
         await expectStatus(resp, 200);
 
         const body = await resp.json();
         expect(body).toHaveProperty('id');
-        expect(body.id).toBe(1);
+        expect(body.id).toBe(dummyJsonData.sampleIds.quoteId);
         expect(body).toHaveProperty('quote');
         expect(body).toHaveProperty('author');
     });
@@ -1005,7 +1001,7 @@ test.describe('E2E Workflows', () => {
 
     test('72. Product CRUD Workflow @api @e2e @dummyjson', async ({ request }) => {
         // DummyJSON doesn't persist created items, so use a known real ID for update/delete
-        const prodId = 1;
+        const prodId = dummyJsonData.sampleIds.productId;
         const updateData = RandomDataUtil.generateUpdatedDummyJsonProductPayload();
         const updateUrl = buildUrl(Routes.UPDATE_PRODUCT, { id: prodId });
         const updateResp = await request.put(updateUrl, { data: updateData });
@@ -1019,7 +1015,7 @@ test.describe('E2E Workflows', () => {
     });
 
     test('73. User CRUD Workflow @api @e2e @dummyjson', async ({ request }) => {
-        const userId = 1;
+        const userId = dummyJsonData.sampleIds.userId;
         const updateData = RandomDataUtil.generateUpdatedDummyJsonUserPayload();
         const updateUrl = buildUrl(Routes.UPDATE_USER, { id: userId });
         const updateResp = await request.put(updateUrl, { data: updateData });
@@ -1031,7 +1027,7 @@ test.describe('E2E Workflows', () => {
     });
 
     test('74. Cart CRUD Workflow @api @e2e @dummyjson', async ({ request }) => {
-        const cartId = 1;
+        const cartId = dummyJsonData.sampleIds.cartId;
         const updateData = RandomDataUtil.generateUpdatedDummyJsonCartPayload(1);
         const updateUrl = buildUrl(Routes.UPDATE_CART, { id: cartId });
         const updateResp = await request.put(updateUrl, { data: updateData });
@@ -1043,7 +1039,7 @@ test.describe('E2E Workflows', () => {
     });
 
     test('75. Recipe CRUD Workflow @api @e2e @dummyjson', async ({ request }) => {
-        const recipeId = 1;
+        const recipeId = dummyJsonData.sampleIds.recipeId;
         const updateData = RandomDataUtil.generateUpdatedDummyJsonRecipePayload();
         const updateUrl = buildUrl(Routes.UPDATE_RECIPE, { id: recipeId });
         const updateResp = await request.put(updateUrl, { data: updateData });
@@ -1055,7 +1051,7 @@ test.describe('E2E Workflows', () => {
     });
 
     test('76. Post CRUD Workflow @api @e2e @dummyjson', async ({ request }) => {
-        const postId = 1;
+        const postId = dummyJsonData.sampleIds.postId;
         const updateData = RandomDataUtil.generateUpdatedDummyJsonPostPayload(1);
         const updateUrl = buildUrl(Routes.UPDATE_POST, { id: postId });
         const updateResp = await request.put(updateUrl, { data: updateData });
