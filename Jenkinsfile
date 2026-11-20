@@ -179,7 +179,7 @@ pipeline {
                     </p>
                 """,
 
-                to: "rahul1988gupta88@gmail.com",
+                to: "RECIVER_EMAIL_ADDRESS",
                 from: "SENDER_EMAIL_ADDRESS",
                 replyTo: "RECIVER_EMAIL_ADDRESS",
                 mimeType: "text/html"
