@@ -144,6 +144,15 @@ pipeline {
                 reportName: 'Playwright HTML Report'
             ])
 
+             publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'reporting-labs',
+                reportFiles: 'index.html',
+                reportName: 'reporting labs HTML Report'
+            ])
+
             publishHTML([
                 allowMissing: true,
                 alwaysLinkToLastBuild: true,
@@ -173,12 +182,14 @@ pipeline {
                         <a href="${env.BUILD_URL}Playwright_20HTML_20Report">
                             Open Playwright HTML Report
                         </a> |
+                        <a href="${env.BUILD_URL}reporting-labs_20HTML_20Report">
+                            Open Reporting Labs HTML Report
+                        </a> |
                         <a href="${env.BUILD_URL}Custom_20Test_20Report">
                             Open Custom Report
                         </a>
                     </p>
                 """,
-
                 to: "rahul1988gupta88@gmail.com",
                 from: "SENDER_EMAIL_ADDRESS",
                 replyTo: "RECIVER_EMAIL_ADDRESS",
